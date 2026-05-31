@@ -1,0 +1,894 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- META & SEO -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Dankery Cartel Member Perks — Priority access, private consultations, harvest events, and bespoke curation for Gold, Platinum, and Black tier members."
+    />
+    <title>Member Perks — The Vault | Dankery Cartel</title>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ICONS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/category.css" />
+  </head>
+  <body>
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
+
+    <!-- NAVBAR -->
+    <nav id="navbar" role="navigation" aria-label="Main Navigation">
+      <a href="index.html" class="nav-logo" aria-label="Dankery Cartel Home">
+        <span class="nav-logo-main">Dankery Cartel</span>
+        <span class="nav-logo-sub"
+          >Elite Private Club &nbsp;·&nbsp; Est. MMXXI</span
+        >
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html#manifesto">Manifesto</a></li>
+        <li><a href="index.html#vault" class="nav-active">The Vault</a></li>
+        <li><a href="index.html#terpene">Genetics</a></li>
+        <li><a href="index.html#syndicate">Syndicate</a></li>
+        <li><a href="index.html#faq">Blackbook</a></li>
+      </ul>
+      <a href="#apply-section" class="btn-vault">Apply Now</a>
+      <button
+        class="nav-hamburger"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- CATEGORY HERO -->
+    <section class="cat-hero" aria-label="Member Perks Hero">
+      <div
+        class="cat-hero-bg"
+        style="background-image: url(&quot;images/membership_hero.png&quot;)"
+      ></div>
+      <div
+        class="cat-hero-overlay"
+        style="
+          background: radial-gradient(
+            ellipse 80% 60% at 50% 40%,
+            rgba(212, 175, 55, 0.14) 0%,
+            rgba(0, 0, 0, 0.55) 45%,
+            rgba(0, 0, 0, 0.97) 100%
+          );
+        "
+      ></div>
+      <div class="cat-hero-content">
+        <a href="index.html#vault" class="cat-back-link">
+          <i class="fa-solid fa-arrow-left"></i>&nbsp; The Vault
+        </a>
+        <p class="cat-hero-label">
+          <i class="fa-solid fa-crown"></i>&nbsp;&nbsp;Category 03
+        </p>
+        <h1 class="cat-hero-title">
+          Member<br /><span class="gold-text">Perks</span>
+        </h1>
+        <p class="cat-hero-tagline">
+          "Priority access. Private consultation. Harvest invitations. The
+          Cartel protects its own."
+        </p>
+        <div class="cat-hero-stats">
+          <div class="cat-hero-stat">
+            <span class="cat-stat-val">3</span>
+            <span class="cat-stat-key">Membership Tiers</span>
+          </div>
+          <div class="cat-hero-stat-sep"></div>
+          <div class="cat-hero-stat">
+            <span class="cat-stat-val">847</span>
+            <span class="cat-stat-key">Active Members</span>
+          </div>
+          <div class="cat-hero-stat-sep"></div>
+          <div class="cat-hero-stat">
+            <span class="cat-stat-val">By<br />Invite</span>
+            <span class="cat-stat-key">Access Only</span>
+          </div>
+        </div>
+      </div>
+      <div class="cat-hero-scroll-line" aria-hidden="true"></div>
+    </section>
+
+    <!-- PERKS OVERVIEW STRIP -->
+    <div class="perks-strip" aria-label="Key member perks">
+      <div class="container perks-strip-inner">
+        <div class="perk-strip-item">
+          <i class="fa-solid fa-bolt"></i>
+          <span>Priority Drop Access</span>
+        </div>
+        <div class="perk-strip-sep">◆</div>
+        <div class="perk-strip-item">
+          <i class="fa-solid fa-truck-fast"></i>
+          <span>Private Curated Delivery</span>
+        </div>
+        <div class="perk-strip-sep">◆</div>
+        <div class="perk-strip-item">
+          <i class="fa-solid fa-file-shield"></i>
+          <span>Full COA Access</span>
+        </div>
+        <div class="perk-strip-sep">◆</div>
+        <div class="perk-strip-item">
+          <i class="fa-solid fa-calendar-star"></i>
+          <span>Harvest Event Invitations</span>
+        </div>
+        <div class="perk-strip-sep">◆</div>
+        <div class="perk-strip-item">
+          <i class="fa-solid fa-handshake"></i>
+          <span>Cultivator Consultations</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- MEMBERSHIP TIERS -->
+    <section class="tiers-section" aria-labelledby="tiers-heading">
+      <div class="container">
+        <div class="cat-section-header fade-up">
+          <p class="cat-section-label">
+            <i class="fa-solid fa-gem"></i>&nbsp; Choose Your Standing
+          </p>
+          <h2 id="tiers-heading" class="cat-section-title gold-text">
+            Membership<br />Tiers
+          </h2>
+          <p class="cat-section-subtitle">
+            Three levels of access. Pricing disclosed during application review.
+            We do not publish rates publicly.
+          </p>
+        </div>
+
+        <div class="tiers-grid">
+          <!-- Gold Tier -->
+          <div
+            class="tier-card fade-up"
+            id="tier-gold"
+            aria-label="Gold Tier membership"
+          >
+            <div class="tier-card-header gold-tier">
+              <div class="tier-icon">
+                <i class="fa-solid fa-circle-dot"></i>
+              </div>
+              <div class="tier-name gold-text">Gold</div>
+              <div class="tier-tagline">Curated Access</div>
+            </div>
+            <div class="tier-card-body">
+              <ul class="tier-perks-list" role="list">
+                <li class="tier-perk included">
+                  <i class="fa-solid fa-check"></i> Access to full Sovereign
+                  Flower collection
+                </li>
+                <li class="tier-perk included">
+                  <i class="fa-solid fa-check"></i> Access to full Liquid Gold
+                  collection
+                </li>
+                <li class="tier-perk included">
+                  <i class="fa-solid fa-check"></i> Standard priority drop
+                  notifications
+                </li>
+                <li class="tier-perk included">
+                  <i class="fa-solid fa-check"></i> Curated private delivery
+                </li>
+                <li class="tier-perk included">
+                  <i class="fa-solid fa-check"></i> Lab results (COA) access per
+                  purchase
+                </li>
+                <li class="tier-perk included">
+                  <i class="fa-solid fa-check"></i> Monthly members newsletter
+                </li>
+                <li class="tier-perk not-included">
+                  <i class="fa-solid fa-xmark"></i> First-access drops
+                </li>
+                <li class="tier-perk not-included">
+                  <i class="fa-solid fa-xmark"></i> Dedicated liaison
+                </li>
+                <li class="tier-perk not-included">
+                  <i class="fa-solid fa-xmark"></i> Harvest event invitations
+                </li>
+                <li class="tier-perk not-included">
+                  <i class="fa-solid fa-xmark"></i> Cultivator consultations
+                </li>
+                <li class="tier-perk not-included">
+                  <i class="fa-solid fa-xmark"></i> Bespoke curation
+                </li>
+                <li class="tier-perk not-included">
+                  <i class="fa-solid fa-xmark"></i> Council invitations
+                </li>
+              </ul>
+              <a
+                href="#apply-section"
+                class="tier-cta gold-cta"
+                id="apply-gold"
+                aria-label="Apply for Gold tier"
+                >Apply for Gold</a
+              >
+            </div>
+          </div>
+
+          <!-- Platinum Tier -->
+          <div
+            class="tier-card tier-featured fade-up"
+            id="tier-platinum"
+            aria-label="Platinum Tier membership"
+          >
+            <div class="tier-featured-badge">Most Popular</div>
+            <div class="tier-card-header platinum-tier">
+              <div class="tier-icon"><i class="fa-solid fa-gem"></i></div>
+              <div class="tier-name gold-text">Platinum</div>
+              <div class="tier-tagline">First-Access Drops</div>
+            </div>
+            <div class="tier-card-body">
+              <ul class="tier-perks-list" role="list">
+                <li class="tier-perk included">
+                  <i class="fa-solid fa-check"></i> Access to full Sovereign
+                  Flower collection
+                </li>
+                <li class="tier-perk included">
+                  <i class="fa-solid fa-check"></i> Access to full Liquid Gold
+                  collection
+                </li>
+                <li class="tier-perk included">
+                  <i class="fa-solid fa-check"></i>
+                  <strong>First-access drop notifications</strong>
+                </li>
+                <li class="tier-perk included">
+                  <i class="fa-solid fa-check"></i> Priority curated private
+                  delivery
+                </li>
+                <li class="tier-perk included">
+                  <i class="fa-solid fa-check"></i> Full COA access + genetic
+                  lineage docs
+                </li>
+                <li class="tier-perk included">
+                  <i class="fa-solid fa-check"></i> Monthly members newsletter
+                </li>
+                <li class="tier-perk included">
+                  <i class="fa-solid fa-check"></i>
+                  <strong>Dedicated member liaison</strong>
+                </li>
+                <li class="tier-perk included">
+                  <i class="fa-solid fa-check"></i>
+                  <strong>Private event access</strong>
+                </li>
+                <li class="tier-perk included">
+                  <i class="fa-solid fa-check"></i> Harvest event invitations
+                </li>
+                <li class="tier-perk not-included">
+                  <i class="fa-solid fa-xmark"></i> Cultivator direct
+                  relationship
+                </li>
+                <li class="tier-perk not-included">
+                  <i class="fa-solid fa-xmark"></i> Bespoke curation
+                </li>
+                <li class="tier-perk not-included">
+                  <i class="fa-solid fa-xmark"></i> Council invitations
+                </li>
+              </ul>
+              <a
+                href="#apply-section"
+                class="tier-cta platinum-cta"
+                id="apply-platinum"
+                aria-label="Apply for Platinum tier"
+                >Apply for Platinum</a
+              >
+            </div>
+          </div>
+
+          <!-- Black Tier -->
+          <div
+            class="tier-card fade-up"
+            id="tier-black"
+            aria-label="Black Tier membership"
+          >
+            <div class="tier-card-header black-tier">
+              <div class="tier-icon"><i class="fa-solid fa-crown"></i></div>
+              <div class="tier-name gold-text">Black</div>
+              <div class="tier-tagline">Council Level</div>
+            </div>
+            <div class="tier-card-body">
+              <ul class="tier-perks-list" role="list">
+                <li class="tier-perk included">
+                  <i class="fa-solid fa-check"></i> Access to full Sovereign
+                  Flower collection
+                </li>
+                <li class="tier-perk included">
+                  <i class="fa-solid fa-check"></i> Access to full Liquid Gold
+                  collection
+                </li>
+                <li class="tier-perk included">
+                  <i class="fa-solid fa-check"></i>
+                  <strong>First-access + exclusive-only drops</strong>
+                </li>
+                <li class="tier-perk included">
+                  <i class="fa-solid fa-check"></i> White-glove curated delivery
+                </li>
+                <li class="tier-perk included">
+                  <i class="fa-solid fa-check"></i> Full COA + internal batch
+                  reports
+                </li>
+                <li class="tier-perk included">
+                  <i class="fa-solid fa-check"></i> Priority members newsletter
+                </li>
+                <li class="tier-perk included">
+                  <i class="fa-solid fa-check"></i>
+                  <strong>Personal dedicated liaison</strong>
+                </li>
+                <li class="tier-perk included">
+                  <i class="fa-solid fa-check"></i>
+                  <strong>All private events</strong>
+                </li>
+                <li class="tier-perk included">
+                  <i class="fa-solid fa-check"></i> Harvest event invitations
+                  (VIP)
+                </li>
+                <li class="tier-perk included">
+                  <i class="fa-solid fa-check"></i>
+                  <strong>Direct cultivator relationships</strong>
+                </li>
+                <li class="tier-perk included">
+                  <i class="fa-solid fa-check"></i>
+                  <strong>Bespoke curation service</strong>
+                </li>
+                <li class="tier-perk included">
+                  <i class="fa-solid fa-check"></i>
+                  <strong>Council invitations</strong>
+                </li>
+              </ul>
+              <a
+                href="#apply-section"
+                class="tier-cta black-cta"
+                id="apply-black"
+                aria-label="Apply for Black tier"
+                >Apply for Black</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- end tiers -->
+
+        <p class="tiers-note">
+          <i class="fa-solid fa-lock"></i> &nbsp; Pricing is disclosed during
+          the application review stage. We do not publish membership rates
+          publicly. All applications reviewed weekly by the Council.
+        </p>
+      </div>
+    </section>
+
+    <!-- PERKS DETAIL GRID -->
+    <section
+      class="perks-detail-section"
+      aria-labelledby="perks-detail-heading"
+    >
+      <div class="container">
+        <div class="cat-section-header fade-up">
+          <p class="cat-section-label">
+            <i class="fa-solid fa-stars"></i>&nbsp; What You Get
+          </p>
+          <h2 id="perks-detail-heading" class="cat-section-title gold-text">
+            Every Benefit.<br />Explained.
+          </h2>
+        </div>
+        <div class="perks-detail-grid">
+          <div
+            class="perk-detail-card fade-up"
+            aria-label="Priority Drop Access perk"
+          >
+            <div class="pdc-icon"><i class="fa-solid fa-bolt"></i></div>
+            <h3 class="pdc-title">Priority Drop Access</h3>
+            <p class="pdc-desc">
+              Members receive exclusive drop notifications before any public
+              announcement. Platinum and Black members get first-access windows
+              48–72 hours ahead of all others.
+            </p>
+          </div>
+
+          <div
+            class="perk-detail-card fade-up"
+            aria-label="Private Curated Delivery perk"
+          >
+            <div class="pdc-icon"><i class="fa-solid fa-truck-fast"></i></div>
+            <h3 class="pdc-title">Private Curated Delivery</h3>
+            <p class="pdc-desc">
+              All Cartel deliveries operate in full regulatory compliance.
+              Discreet, insured, and professionally packaged in our signature
+              matte black presentation boxes. Age verification at every drop.
+            </p>
+          </div>
+
+          <div
+            class="perk-detail-card fade-up"
+            aria-label="Full COA Access perk"
+          >
+            <div class="pdc-icon"><i class="fa-solid fa-file-shield"></i></div>
+            <h3 class="pdc-title">Full COA Access</h3>
+            <p class="pdc-desc">
+              Every product purchase grants access to the full Certificate of
+              Analysis from our ISO-certified lab partners. Know exactly what is
+              in every batch — cannabinoids, terpenes, and all contaminant
+              panels.
+            </p>
+          </div>
+
+          <div
+            class="perk-detail-card fade-up"
+            aria-label="Harvest Events perk"
+          >
+            <div class="pdc-icon">
+              <i class="fa-solid fa-calendar-star"></i>
+            </div>
+            <h3 class="pdc-title">Harvest Event Invitations</h3>
+            <p class="pdc-desc">
+              Platinum and Black members receive curated invitations to live
+              harvest events at partner cultivation facilities. Tour the grow,
+              meet the cultivators, sample freshly cured cuts before they're
+              vaulted.
+            </p>
+          </div>
+
+          <div
+            class="perk-detail-card fade-up"
+            aria-label="Cultivator Consultations perk"
+          >
+            <div class="pdc-icon"><i class="fa-solid fa-handshake"></i></div>
+            <h3 class="pdc-title">Cultivator Consultations</h3>
+            <p class="pdc-desc">
+              Black tier members access direct relationships with our master
+              cultivators. Commission custom genetic expressions, request
+              specific terpene profiles, and contribute to the next generation
+              of Vault cuts.
+            </p>
+          </div>
+
+          <div
+            class="perk-detail-card fade-up"
+            aria-label="Bespoke Curation perk"
+          >
+            <div class="pdc-icon">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <h3 class="pdc-title">Bespoke Curation</h3>
+            <p class="pdc-desc">
+              The pinnacle of Black tier access. A dedicated council liaison
+              curates a personalised selection from across the Vault each cycle,
+              tailored to your documented preferences and consumption profile.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPLICATION SECTION -->
+    <section
+      id="apply-section"
+      class="apply-section"
+      aria-labelledby="apply-heading"
+    >
+      <div class="apply-bg" aria-hidden="true"></div>
+      <div class="apply-bg-overlay" aria-hidden="true"></div>
+      <canvas
+        id="apply-canvas"
+        aria-hidden="true"
+        style="
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
+          z-index: 2;
+        "
+      ></canvas>
+      <div class="container apply-content">
+        <div class="apply-inner">
+          <div class="apply-text fade-up">
+            <i class="fa-solid fa-crown apply-crown" aria-hidden="true"></i>
+            <p class="cat-section-label">
+              <i class="fa-solid fa-envelope-open-text"></i>&nbsp; Join the
+              Syndicate
+            </p>
+            <h2 id="apply-heading" class="cat-section-title">
+              Apply for<br /><span class="gold-text">Access.</span>
+            </h2>
+            <p class="apply-body">
+              Membership is by invitation or curated application. The Council
+              reviews applications weekly and selects based on community fit,
+              location compliance, and referral standing.
+            </p>
+            <ul class="apply-process-list">
+              <li>
+                <span class="apply-step-num">01</span> Submit your application
+                below
+              </li>
+              <li>
+                <span class="apply-step-num">02</span> Council review within
+                7–14 business days
+              </li>
+              <li>
+                <span class="apply-step-num">03</span> Receive secure
+                communication with tier offer
+              </li>
+              <li>
+                <span class="apply-step-num">04</span> Confirm and access the
+                Vault
+              </li>
+            </ul>
+            <p class="apply-disclaimer">
+              21+ Only &nbsp;·&nbsp; Compliant Jurisdictions Only &nbsp;·&nbsp;
+              No Walk-Ins
+            </p>
+          </div>
+
+          <div class="apply-form-wrap fade-up">
+            <form
+              class="apply-form"
+              id="membership-apply-form"
+              novalidate
+              aria-label="Membership application form"
+            >
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="apply-name" class="form-label">Full Name</label>
+                  <input
+                    type="text"
+                    id="apply-name"
+                    name="name"
+                    class="form-input"
+                    placeholder="Your full name"
+                    required
+                    autocomplete="name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="apply-email" class="form-label"
+                    >Email Address</label
+                  >
+                  <input
+                    type="email"
+                    id="apply-email"
+                    name="email"
+                    class="form-input"
+                    placeholder="your@email.com"
+                    required
+                    autocomplete="email"
+                  />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="apply-location" class="form-label"
+                    >City / Region</label
+                  >
+                  <input
+                    type="text"
+                    id="apply-location"
+                    name="location"
+                    class="form-input"
+                    placeholder="City, Country"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="apply-tier" class="form-label"
+                    >Preferred Tier</label
+                  >
+                  <select
+                    id="apply-tier"
+                    name="tier"
+                    class="form-input form-select"
+                    required
+                  >
+                    <option value="" disabled selected>Select a tier</option>
+                    <option value="gold">Gold</option>
+                    <option value="platinum">Platinum</option>
+                    <option value="black">Black</option>
+                    <option value="unsure">Let the Council Decide</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="apply-referral" class="form-label"
+                  >Referral Code or Member Name
+                  <span class="form-optional">(optional)</span></label
+                >
+                <input
+                  type="text"
+                  id="apply-referral"
+                  name="referral"
+                  class="form-input"
+                  placeholder="Member referral code or name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="apply-message" class="form-label"
+                  >Why do you seek access to the Cartel?</label
+                >
+                <textarea
+                  id="apply-message"
+                  name="message"
+                  class="form-input form-textarea"
+                  rows="4"
+                  placeholder="Tell the Council what distinguishes you..."
+                  required
+                ></textarea>
+              </div>
+              <div class="form-checkbox-group">
+                <input type="checkbox" id="apply-age" name="age" required />
+                <label for="apply-age" class="form-check-label">
+                  I confirm I am <strong>21 years of age or older</strong> and
+                  that cannabis is legal in my jurisdiction.
+                </label>
+              </div>
+              <div class="form-checkbox-group">
+                <input type="checkbox" id="apply-terms" name="terms" required />
+                <label for="apply-terms" class="form-check-label">
+                  I agree to the <a href="#">Terms of Access</a> and
+                  <a href="#">Privacy Policy</a>.
+                </label>
+              </div>
+              <button
+                type="submit"
+                class="btn-primary form-submit-btn"
+                id="apply-submit-btn"
+                aria-label="Submit membership application"
+              >
+                Submit Application &nbsp;<i class="fa-solid fa-arrow-right"></i>
+              </button>
+              <p class="form-note">
+                <i class="fa-solid fa-lock"></i> &nbsp; Your application is
+                confidential and reviewed exclusively by the Council. We do not
+                share your data.
+              </p>
+            </form>
+            <div
+              class="form-success"
+              id="apply-success"
+              style="display: none"
+              aria-live="polite"
+              role="status"
+            >
+              <i class="fa-solid fa-crown form-success-icon"></i>
+              <h3 class="form-success-title gold-text">
+                Application Received.
+              </h3>
+              <p class="form-success-body">
+                The Council will review your application and contact you via the
+                email provided within 7–14 business days via a secure channel.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VAULT NAV -->
+    <section class="vault-nav-section" aria-label="Other Vault Categories">
+      <div class="container">
+        <p
+          class="cat-section-label"
+          style="text-align: center; margin-bottom: 3rem"
+        >
+          <i class="fa-solid fa-vault"></i>&nbsp; Explore the Full Vault
+        </p>
+        <div class="vault-nav-grid">
+          <a
+            href="flower.html"
+            class="vault-nav-card"
+            id="member-to-flower"
+            aria-label="Explore Sovereign Flower"
+          >
+            <img
+              src="images/flower_hero.png"
+              alt="Sovereign Flower"
+              loading="lazy"
+            />
+            <div class="vault-nav-card-body">
+              <span class="vault-nav-tag">Category 01</span>
+              <h3 class="vault-nav-title">
+                <i class="fa-solid fa-leaf"></i>&nbsp; Sovereign Flower
+              </h3>
+              <p>
+                Hand-selected, single-origin cuts. Terpene-profiled, trimmed by
+                hand.
+              </p>
+              <span class="vault-nav-link"
+                >Explore the Cut &nbsp;<i class="fa-solid fa-arrow-right"></i
+              ></span>
+            </div>
+          </a>
+          <a
+            href="concentrates.html"
+            class="vault-nav-card"
+            id="member-to-conc"
+            aria-label="Explore Liquid Gold"
+          >
+            <img
+              src="images/concentrate_hero.png"
+              alt="Liquid Gold Concentrates"
+              loading="lazy"
+            />
+            <div class="vault-nav-card-body">
+              <span class="vault-nav-tag">Category 02</span>
+              <h3 class="vault-nav-title">
+                <i class="fa-solid fa-flask"></i>&nbsp; Liquid Gold
+              </h3>
+              <p>
+                Hydrocarbon-extracted full-spectrum concentrates. Live resin,
+                rosin, diamonds.
+              </p>
+              <span class="vault-nav-link"
+                >Enter the Lab &nbsp;<i class="fa-solid fa-arrow-right"></i
+              ></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="footer" role="contentinfo">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="brand-name">Dankery Cartel</div>
+            <div class="brand-sub">Elite Private Cannabis Club</div>
+            <p>
+              A sovereign operation dedicated to the absolute pursuit of clean,
+              potent, and genetically documented cannabis.
+            </p>
+            <div class="footer-socials">
+              <a href="#" class="social-link" aria-label="Instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="#" class="social-link" aria-label="Telegram"
+                ><i class="fa-brands fa-telegram"></i
+              ></a>
+              <a href="#" class="social-link" aria-label="X / Twitter"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+            </div>
+          </div>
+          <div>
+            <h3 class="footer-col-title">The Vault</h3>
+            <ul class="footer-links" role="list">
+              <li><a href="flower.html">Sovereign Flower</a></li>
+              <li><a href="concentrates.html">Liquid Gold</a></li>
+              <li><a href="membership.html">Member Perks</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="footer-col-title">Navigate</h3>
+            <ul class="footer-links" role="list">
+              <li><a href="index.html#manifesto">The Manifesto</a></li>
+              <li><a href="index.html#terpene">Terpene Chemistry</a></li>
+              <li><a href="index.html#syndicate">The Syndicate</a></li>
+              <li><a href="index.html#faq">The Blackbook</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="footer-col-title">Compliance</h3>
+            <ul class="footer-links" role="list">
+              <li><a href="#">Lab Results (COA)</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Access</a></li>
+              <li><a href="#">Responsible Use</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-legal">
+            <p>
+              &copy; 2024 Dankery Cartel. All rights reserved.<br />
+              Cannabis products are for use by adults 21 years of age or older.
+              <a href="#">Privacy</a> &nbsp;·&nbsp;
+              <a href="#">Terms</a> &nbsp;·&nbsp;
+              <a href="#">Legal Compliance</a>
+            </p>
+          </div>
+          <div class="age-badge">
+            <i class="fa-solid fa-shield-halved"></i> 21+ Only &nbsp;·&nbsp;
+            Licensed &amp; Compliant
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    <script>
+      if (typeof gsap !== "undefined") {
+        gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+      }
+    </script>
+    <script src="js/category.js"></script>
+    <script>
+      // Membership form handler
+      document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("membership-apply-form");
+        const success = document.getElementById("apply-success");
+        if (form) {
+          form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            if (!form.checkValidity()) {
+              form.reportValidity();
+              return;
+            }
+            gsap.to(form, {
+              opacity: 0,
+              y: -20,
+              duration: 0.5,
+              onComplete: () => {
+                form.style.display = "none";
+                success.style.display = "flex";
+                gsap.fromTo(
+                  success,
+                  { opacity: 0, y: 30 },
+                  { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" },
+                );
+              },
+            });
+          });
+        }
+        // Canvas particles for apply section
+        const canvas = document.getElementById("apply-canvas");
+        if (canvas) {
+          const ctx = canvas.getContext("2d");
+          canvas.width = canvas.offsetWidth;
+          canvas.height = canvas.offsetHeight;
+          window.addEventListener("resize", () => {
+            canvas.width = canvas.offsetWidth;
+            canvas.height = canvas.offsetHeight;
+          });
+          const pts = Array.from({ length: 40 }, () => ({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            r: Math.random() * 1.5 + 0.2,
+            vx: (Math.random() - 0.5) * 0.3,
+            vy: -(Math.random() * 0.4 + 0.1),
+            a: Math.random() * 0.5 + 0.1,
+            d: Math.random() * 0.002 + 0.001,
+          }));
+          (function tick() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            pts.forEach((p) => {
+              p.x += p.vx;
+              p.y += p.vy;
+              p.a -= p.d;
+              if (p.a <= 0 || p.y < 0) {
+                p.x = Math.random() * canvas.width;
+                p.y = canvas.height + 5;
+                p.a = Math.random() * 0.4 + 0.1;
+              }
+              ctx.save();
+              ctx.globalAlpha = p.a;
+              ctx.fillStyle = `hsl(${42 + Math.random() * 15},90%,60%)`;
+              ctx.beginPath();
+              ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+              ctx.fill();
+              ctx.restore();
+            });
+            requestAnimationFrame(tick);
+          })();
+        }
+      });
+    </script>
+  </body>
+</html>
