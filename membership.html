@@ -831,20 +831,28 @@
               form.reportValidity();
               return;
             }
-            gsap.to(form, {
-              opacity: 0,
-              y: -20,
-              duration: 0.5,
-              onComplete: () => {
-                form.style.display = "none";
-                success.style.display = "flex";
-                gsap.fromTo(
-                  success,
-                  { opacity: 0, y: 30 },
-                  { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" },
-                );
-              },
-            });
+            const showSuccess = () => {
+              form.style.display = "none";
+              success.style.display = "flex";
+            };
+
+            if (typeof gsap !== "undefined") {
+              gsap.to(form, {
+                opacity: 0,
+                y: -20,
+                duration: 0.5,
+                onComplete: () => {
+                  showSuccess();
+                  gsap.fromTo(
+                    success,
+                    { opacity: 0, y: 30 },
+                    { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" },
+                  );
+                },
+              });
+            } else {
+              showSuccess();
+            }
           });
         }
         // Canvas particles for apply section

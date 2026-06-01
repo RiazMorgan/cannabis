@@ -1,491 +1,773 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <!-- META & SEO -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#000000" />
-  <meta name="description" content="Dankery Cartel Sovereign Flower — Hand-selected, single-origin cannabis cuts. Lab-verified, terpene-profiled, trimmed by hand." />
-  <title>Sovereign Flower — The Vault | Dankery Cartel</title>
+  <head>
+    <!-- META & SEO -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Dankery Cartel Sovereign Flower — Hand-selected, single-origin cannabis cuts. Lab-verified, terpene-profiled, trimmed by hand."
+    />
+    <title>Sovereign Flower — The Vault | Dankery Cartel</title>
 
-  <!-- FONTS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- ICONS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- ICONS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
-  <!-- STYLESHEET -->
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/category.css" />
-</head>
-<body>
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/category.css" />
+  </head>
+  <body>
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
 
-  <!-- CUSTOM CURSOR -->
-  <div class="cursor-dot" aria-hidden="true"></div>
-  <div class="cursor-ring" aria-hidden="true"></div>
-
-  <!-- NAVBAR -->
-  <nav id="navbar" role="navigation" aria-label="Main Navigation">
-    <a href="index.html" class="nav-logo" aria-label="Dankery Cartel Home">
-      <span class="nav-logo-main">Dankery Cartel</span>
-      <span class="nav-logo-sub">Elite Private Club &nbsp;·&nbsp; Est. MMXXI</span>
-    </a>
-    <ul class="nav-links" role="list">
-      <li><a href="index.html#manifesto">Manifesto</a></li>
-      <li><a href="index.html#vault" class="nav-active">The Vault</a></li>
-      <li><a href="index.html#terpene">Genetics</a></li>
-      <li><a href="index.html#syndicate">Syndicate</a></li>
-      <li><a href="index.html#faq">Blackbook</a></li>
-    </ul>
-    <a href="index.html#cta-banner" class="btn-vault">Apply for Access</a>
-    <button class="nav-hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
-
-  <!-- CATEGORY HERO -->
-  <section class="cat-hero" aria-label="Sovereign Flower Hero">
-    <div class="cat-hero-bg" style="background-image:url('images/flower_hero.png')"></div>
-    <div class="cat-hero-overlay"></div>
-    <div class="cat-hero-content">
-      <a href="index.html#vault" class="cat-back-link" aria-label="Back to Vault">
-        <i class="fa-solid fa-arrow-left"></i>&nbsp; The Vault
+    <!-- NAVBAR -->
+    <nav id="navbar" role="navigation" aria-label="Main Navigation">
+      <a href="index.html" class="nav-logo" aria-label="Dankery Cartel Home">
+        <span class="nav-logo-main">Dankery Cartel</span>
+        <span class="nav-logo-sub"
+          >Elite Private Club &nbsp;·&nbsp; Est. MMXXI</span
+        >
       </a>
-      <p class="cat-hero-label">
-        <i class="fa-solid fa-leaf"></i>&nbsp;&nbsp;Category 01
-      </p>
-      <h1 class="cat-hero-title">Sovereign<br/><span class="gold-text">Flower</span></h1>
-      <p class="cat-hero-tagline">"Single-origin cuts. Hand-trimmed. Terpene-documented. No mid. No filler. Only the cut."</p>
-      <div class="cat-hero-stats">
-        <div class="cat-hero-stat">
-          <span class="cat-stat-val">12</span>
-          <span class="cat-stat-key">Active Cuts</span>
-        </div>
-        <div class="cat-hero-stat-sep"></div>
-        <div class="cat-hero-stat">
-          <span class="cat-stat-val">34.2%</span>
-          <span class="cat-stat-key">Peak THC</span>
-        </div>
-        <div class="cat-hero-stat-sep"></div>
-        <div class="cat-hero-stat">
-          <span class="cat-stat-val">100%</span>
-          <span class="cat-stat-key">Lab Verified</span>
-        </div>
-      </div>
-    </div>
-    <div class="cat-hero-scroll-line" aria-hidden="true"></div>
-  </section>
-
-  <!-- FILTER BAR -->
-  <div class="filter-bar" role="tablist" aria-label="Filter strains by type">
-    <div class="container filter-bar-inner">
-      <button class="filter-btn active" role="tab" aria-selected="true" data-filter="all" id="filter-all">All Cuts</button>
-      <button class="filter-btn" role="tab" aria-selected="false" data-filter="indica" id="filter-indica">
-        <span class="filter-dot indica"></span> Indica
+      <ul class="nav-links" role="list">
+        <li><a href="index.html#manifesto">Manifesto</a></li>
+        <li><a href="index.html#vault" class="nav-active">The Vault</a></li>
+        <li><a href="index.html#terpene">Genetics</a></li>
+        <li><a href="index.html#syndicate">Syndicate</a></li>
+        <li><a href="index.html#faq">Blackbook</a></li>
+      </ul>
+      <a href="index.html#cta-banner" class="btn-vault">Apply for Access</a>
+      <button
+        class="nav-hamburger"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+      >
+        <span></span><span></span><span></span>
       </button>
-      <button class="filter-btn" role="tab" aria-selected="false" data-filter="sativa" id="filter-sativa">
-        <span class="filter-dot sativa"></span> Sativa
-      </button>
-      <button class="filter-btn" role="tab" aria-selected="false" data-filter="hybrid" id="filter-hybrid">
-        <span class="filter-dot hybrid"></span> Hybrid
-      </button>
-      <div class="filter-divider"></div>
-      <div class="filter-sort">
-        <label for="sort-select" class="filter-sort-label">Sort by</label>
-        <select id="sort-select" class="sort-select">
-          <option value="thc">THC %</option>
-          <option value="name">Name</option>
-          <option value="rarity">Rarity</option>
-        </select>
-      </div>
-    </div>
-  </div>
+    </nav>
 
-  <!-- FEATURED STRAIN SPOTLIGHT -->
-  <section class="featured-strain" aria-labelledby="featured-strain-heading">
-    <div class="container">
-      <div class="featured-strain-inner">
-        <div class="featured-strain-img-wrap fade-in">
-          <img src="images/trichome_hero.png" alt="Cartel OG — Featured Sovereign Cut" loading="lazy" />
-          <div class="featured-strain-badge">
-            <i class="fa-solid fa-crown"></i>
-            <span>Featured Cut</span>
+    <!-- CATEGORY HERO -->
+    <section class="cat-hero" aria-label="Sovereign Flower Hero">
+      <div
+        class="cat-hero-bg"
+        style="background-image: url(&quot;images/flower_hero.png&quot;)"
+      ></div>
+      <div class="cat-hero-overlay"></div>
+      <div class="cat-hero-content">
+        <a
+          href="index.html#vault"
+          class="cat-back-link"
+          aria-label="Back to Vault"
+        >
+          <i class="fa-solid fa-arrow-left"></i>&nbsp; The Vault
+        </a>
+        <p class="cat-hero-label">
+          <i class="fa-solid fa-leaf"></i>&nbsp;&nbsp;Category 01
+        </p>
+        <h1 class="cat-hero-title">
+          Sovereign<br /><span class="gold-text">Flower</span>
+        </h1>
+        <p class="cat-hero-tagline">
+          "Single-origin cuts. Hand-trimmed. Terpene-documented. No mid. No
+          filler. Only the cut."
+        </p>
+        <div class="cat-hero-stats">
+          <div class="cat-hero-stat">
+            <span class="cat-stat-val">12</span>
+            <span class="cat-stat-key">Active Cuts</span>
           </div>
-        </div>
-        <div class="featured-strain-info fade-up">
-          <p class="cat-section-label">
-            <i class="fa-solid fa-star"></i>&nbsp; Strain Spotlight
-          </p>
-          <h2 id="featured-strain-heading" class="featured-strain-name gold-text">Cartel OG</h2>
-          <div class="featured-strain-badges">
-            <span class="strain-type hybrid">Hybrid</span>
-            <span class="strain-rarity ultra-rare">Ultra Rare</span>
-            <span class="strain-gen">Gen VI</span>
+          <div class="cat-hero-stat-sep"></div>
+          <div class="cat-hero-stat">
+            <span class="cat-stat-val">34.2%</span>
+            <span class="cat-stat-key">Peak THC</span>
           </div>
-          <div class="featured-thc-row">
-            <div class="featured-thc-block">
-              <div class="thc-big">34.2%</div>
-              <div class="thc-lbl">THC</div>
-            </div>
-            <div class="featured-thc-block">
-              <div class="thc-big secondary">0.08%</div>
-              <div class="thc-lbl">CBD</div>
-            </div>
-            <div class="featured-thc-block">
-              <div class="thc-big secondary">1.2%</div>
-              <div class="thc-lbl">CBG</div>
-            </div>
-          </div>
-          <p class="featured-strain-desc">
-            A diesel-forward expression of our proprietary OG lineage, dialed in over six generations. 
-            Notes of black pepper, lemon rind, and pine resin. Full cerebral onset, body-anchoring finish. 
-            Sourced exclusively from our founding cultivator in a closed-circuit grow environment.
-          </p>
-          <div class="terpene-mini-list">
-            <p class="terpene-mini-label">Primary Terpenes</p>
-            <div class="terpene-mini-tags">
-              <span class="terpene-tag">Myrcene 1.8%</span>
-              <span class="terpene-tag">Limonene 1.4%</span>
-              <span class="terpene-tag">β-Caryophyllene 0.9%</span>
-              <span class="terpene-tag">Linalool 0.7%</span>
-            </div>
-          </div>
-          <div class="featured-strain-ctas">
-            <a href="index.html#cta-banner" class="btn-primary" id="flower-featured-request">Request This Cut</a>
-            <a href="#strain-grid" class="btn-secondary" id="flower-view-all"><span>View All Strains</span></a>
+          <div class="cat-hero-stat-sep"></div>
+          <div class="cat-hero-stat">
+            <span class="cat-stat-val">100%</span>
+            <span class="cat-stat-key">Lab Verified</span>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+      <div class="cat-hero-scroll-line" aria-hidden="true"></div>
+    </section>
 
-  <!-- STRAIN GRID -->
-  <section id="strain-grid" class="strain-grid-section" aria-labelledby="strain-grid-heading">
-    <div class="container">
-      <div class="cat-section-header fade-up">
-        <p class="cat-section-label"><i class="fa-solid fa-seedling"></i>&nbsp; The Collection</p>
-        <h2 id="strain-grid-heading" class="cat-section-title gold-text">Active Cuts</h2>
-        <p class="cat-section-subtitle">Every strain is lab-verified, genetically documented, and hand-selected by the council.</p>
-      </div>
-
-      <div class="strain-cards-grid" id="strain-cards-grid" role="list">
-
-        <!-- Strain 1 -->
-        <article class="strain-product-card" data-type="hybrid" role="listitem" aria-label="Cartel OG Strain">
-          <div class="spc-img-wrap">
-            <img src="images/trichome_hero.png" alt="Cartel OG cannabis bud" loading="lazy" class="spc-img" />
-            <div class="spc-overlay"></div>
-            <span class="spc-type-badge hybrid">Hybrid</span>
-            <span class="spc-rarity ultra">Ultra Rare</span>
-          </div>
-          <div class="spc-body">
-            <div class="spc-header">
-              <h3 class="spc-name">Cartel OG</h3>
-              <div class="spc-thc">34.2% <span>THC</span></div>
-            </div>
-            <p class="spc-lineage">OG Kush × Diesel · Gen VI</p>
-            <p class="spc-desc">Diesel-forward with black pepper, lemon rind and pine resin. Full cerebral onset, body-anchoring finish.</p>
-            <div class="spc-terpenes">
-              <span>Myrcene</span><span>Limonene</span><span>β-Caryophyllene</span>
-            </div>
-            <div class="spc-footer">
-              <div class="spc-avail available">
-                <i class="fa-solid fa-circle"></i> In Rotation
-              </div>
-              <a href="index.html#cta-banner" class="spc-btn" aria-label="Request Cartel OG">Request</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Strain 2 -->
-        <article class="strain-product-card" data-type="indica" role="listitem" aria-label="Black Throne Strain">
-          <div class="spc-img-wrap">
-            <img src="images/luxury_packaging.png" alt="Black Throne indica cannabis" loading="lazy" class="spc-img" />
-            <div class="spc-overlay"></div>
-            <span class="spc-type-badge indica">Indica</span>
-            <span class="spc-rarity rare">Rare</span>
-          </div>
-          <div class="spc-body">
-            <div class="spc-header">
-              <h3 class="spc-name">Black Throne</h3>
-              <div class="spc-thc">31.8% <span>THC</span></div>
-            </div>
-            <p class="spc-lineage">Granddaddy Purple × Zkittlez · Gen IV</p>
-            <p class="spc-desc">Dark grape, blueberry candy and damp earth. Heavy sedation with euphoric introduction. Elite sleep cut.</p>
-            <div class="spc-terpenes">
-              <span>Linalool</span><span>Myrcene</span><span>Ocimene</span>
-            </div>
-            <div class="spc-footer">
-              <div class="spc-avail available">
-                <i class="fa-solid fa-circle"></i> In Rotation
-              </div>
-              <a href="index.html#cta-banner" class="spc-btn" aria-label="Request Black Throne">Request</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Strain 3 -->
-        <article class="strain-product-card" data-type="sativa" role="listitem" aria-label="Solar Flare Strain">
-          <div class="spc-img-wrap">
-            <img src="images/trichome_hero.png" alt="Solar Flare sativa cannabis" loading="lazy" class="spc-img" />
-            <div class="spc-overlay"></div>
-            <span class="spc-type-badge sativa">Sativa</span>
-            <span class="spc-rarity common">Select</span>
-          </div>
-          <div class="spc-body">
-            <div class="spc-header">
-              <h3 class="spc-name">Solar Flare</h3>
-              <div class="spc-thc">29.5% <span>THC</span></div>
-            </div>
-            <p class="spc-lineage">Jack Herer × Durban Poison · Gen III</p>
-            <p class="spc-desc">Tropical citrus and green mango with a sharp pine finish. Energising, creative, and razor-focus inducing.</p>
-            <div class="spc-terpenes">
-              <span>Terpinolene</span><span>Limonene</span><span>Pinene</span>
-            </div>
-            <div class="spc-footer">
-              <div class="spc-avail available">
-                <i class="fa-solid fa-circle"></i> In Rotation
-              </div>
-              <a href="index.html#cta-banner" class="spc-btn" aria-label="Request Solar Flare">Request</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Strain 4 -->
-        <article class="strain-product-card" data-type="hybrid" role="listitem" aria-label="Phantom Runtz Strain">
-          <div class="spc-img-wrap">
-            <img src="images/lounge_ambient.png" alt="Phantom Runtz hybrid cannabis" loading="lazy" class="spc-img" />
-            <div class="spc-overlay"></div>
-            <span class="spc-type-badge hybrid">Hybrid</span>
-            <span class="spc-rarity rare">Rare</span>
-          </div>
-          <div class="spc-body">
-            <div class="spc-header">
-              <h3 class="spc-name">Phantom Runtz</h3>
-              <div class="spc-thc">32.1% <span>THC</span></div>
-            </div>
-            <p class="spc-lineage">Runtz × Ghost OG · Gen V</p>
-            <p class="spc-desc">Candy-forward sweetness over a creamy vanilla base. Balanced euphoria with a long-lasting body ease.</p>
-            <div class="spc-terpenes">
-              <span>Limonene</span><span>β-Caryophyllene</span><span>Linalool</span>
-            </div>
-            <div class="spc-footer">
-              <div class="spc-avail limited">
-                <i class="fa-solid fa-circle"></i> Limited Drop
-              </div>
-              <a href="index.html#cta-banner" class="spc-btn" aria-label="Request Phantom Runtz">Request</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Strain 5 -->
-        <article class="strain-product-card" data-type="indica" role="listitem" aria-label="Obsidian Kush Strain">
-          <div class="spc-img-wrap">
-            <img src="images/trichome_hero.png" alt="Obsidian Kush indica cannabis" loading="lazy" class="spc-img" />
-            <div class="spc-overlay"></div>
-            <span class="spc-type-badge indica">Indica</span>
-            <span class="spc-rarity ultra">Ultra Rare</span>
-          </div>
-          <div class="spc-body">
-            <div class="spc-header">
-              <h3 class="spc-name">Obsidian Kush</h3>
-              <div class="spc-thc">33.7% <span>THC</span></div>
-            </div>
-            <p class="spc-lineage">OG Kush × Black Afghan · Gen VI</p>
-            <p class="spc-desc">Ancient kush lineage refined over six generations. Hash-forward aroma, deep spice, cedar and black soil.</p>
-            <div class="spc-terpenes">
-              <span>Myrcene</span><span>β-Caryophyllene</span><span>Humulene</span>
-            </div>
-            <div class="spc-footer">
-              <div class="spc-avail limited">
-                <i class="fa-solid fa-circle"></i> Limited Drop
-              </div>
-              <a href="index.html#cta-banner" class="spc-btn" aria-label="Request Obsidian Kush">Request</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Strain 6 -->
-        <article class="strain-product-card" data-type="sativa" role="listitem" aria-label="Golden Meridian Strain">
-          <div class="spc-img-wrap">
-            <img src="images/luxury_packaging.png" alt="Golden Meridian sativa cannabis" loading="lazy" class="spc-img" />
-            <div class="spc-overlay"></div>
-            <span class="spc-type-badge sativa">Sativa</span>
-            <span class="spc-rarity common">Select</span>
-          </div>
-          <div class="spc-body">
-            <div class="spc-header">
-              <h3 class="spc-name">Golden Meridian</h3>
-              <div class="spc-thc">28.4% <span>THC</span></div>
-            </div>
-            <p class="spc-lineage">Amnesia Haze × Golden Goat · Gen II</p>
-            <p class="spc-desc">Bright lemon and white pepper with a subtle floral finish. Uplifting, social, and long-duration head high.</p>
-            <div class="spc-terpenes">
-              <span>Limonene</span><span>Terpinolene</span><span>Ocimene</span>
-            </div>
-            <div class="spc-footer">
-              <div class="spc-avail available">
-                <i class="fa-solid fa-circle"></i> In Rotation
-              </div>
-              <a href="index.html#cta-banner" class="spc-btn" aria-label="Request Golden Meridian">Request</a>
-            </div>
-          </div>
-        </article>
-
-      </div><!-- end grid -->
-
-      <!-- Load More -->
-      <div class="load-more-wrap">
-        <button class="load-more-btn" id="load-more-strains" aria-label="Load more strains">
-          View Full Archive &nbsp;<i class="fa-solid fa-chevron-down"></i>
+    <!-- FILTER BAR -->
+    <div class="filter-bar" role="tablist" aria-label="Filter strains by type">
+      <div class="container filter-bar-inner">
+        <button
+          class="filter-btn active"
+          role="tab"
+          aria-selected="true"
+          data-filter="all"
+          id="filter-all"
+        >
+          All Cuts
         </button>
-        <p class="load-more-note">12 cuts currently in rotation. Member access required to view all.</p>
+        <button
+          class="filter-btn"
+          role="tab"
+          aria-selected="false"
+          data-filter="indica"
+          id="filter-indica"
+        >
+          <span class="filter-dot indica"></span> Indica
+        </button>
+        <button
+          class="filter-btn"
+          role="tab"
+          aria-selected="false"
+          data-filter="sativa"
+          id="filter-sativa"
+        >
+          <span class="filter-dot sativa"></span> Sativa
+        </button>
+        <button
+          class="filter-btn"
+          role="tab"
+          aria-selected="false"
+          data-filter="hybrid"
+          id="filter-hybrid"
+        >
+          <span class="filter-dot hybrid"></span> Hybrid
+        </button>
+        <div class="filter-divider"></div>
+        <div class="filter-sort">
+          <label for="sort-select" class="filter-sort-label">Sort by</label>
+          <select id="sort-select" class="sort-select">
+            <option value="thc">THC %</option>
+            <option value="name">Name</option>
+            <option value="rarity">Rarity</option>
+          </select>
+        </div>
       </div>
-
     </div>
-  </section>
 
-  <!-- LAB VERIFICATION SECTION -->
-  <section class="lab-verify-section" aria-labelledby="lab-heading">
-    <div class="container">
-      <div class="lab-verify-inner">
-        <div class="lab-verify-text fade-up">
-          <p class="cat-section-label"><i class="fa-solid fa-microscope"></i>&nbsp; Compliance & Purity</p>
-          <h2 id="lab-heading" class="cat-section-title">Lab<br/><span class="gold-text">Verified.</span></h2>
-          <p class="lab-verify-body">
-            Every cut in the Sovereign Flower collection is submitted to ISO/IEC 17025-certified third-party laboratories 
-            for full-panel testing. No batch reaches the Vault without passing every metric.
+    <!-- FEATURED STRAIN SPOTLIGHT -->
+    <section class="featured-strain" aria-labelledby="featured-strain-heading">
+      <div class="container">
+        <div class="featured-strain-inner">
+          <div class="featured-strain-img-wrap fade-in">
+            <img
+              src="images/trichome_hero.png"
+              alt="Cartel OG — Featured Sovereign Cut"
+              loading="lazy"
+            />
+            <div class="featured-strain-badge">
+              <i class="fa-solid fa-crown"></i>
+              <span>Featured Cut</span>
+            </div>
+          </div>
+          <div class="featured-strain-info fade-up">
+            <p class="cat-section-label">
+              <i class="fa-solid fa-star"></i>&nbsp; Strain Spotlight
+            </p>
+            <h2
+              id="featured-strain-heading"
+              class="featured-strain-name gold-text"
+            >
+              Cartel OG
+            </h2>
+            <div class="featured-strain-badges">
+              <span class="strain-type hybrid">Hybrid</span>
+              <span class="strain-rarity ultra-rare">Ultra Rare</span>
+              <span class="strain-gen">Gen VI</span>
+            </div>
+            <div class="featured-thc-row">
+              <div class="featured-thc-block">
+                <div class="thc-big">34.2%</div>
+                <div class="thc-lbl">THC</div>
+              </div>
+              <div class="featured-thc-block">
+                <div class="thc-big secondary">0.08%</div>
+                <div class="thc-lbl">CBD</div>
+              </div>
+              <div class="featured-thc-block">
+                <div class="thc-big secondary">1.2%</div>
+                <div class="thc-lbl">CBG</div>
+              </div>
+            </div>
+            <p class="featured-strain-desc">
+              A diesel-forward expression of our proprietary OG lineage, dialed
+              in over six generations. Notes of black pepper, lemon rind, and
+              pine resin. Full cerebral onset, body-anchoring finish. Sourced
+              exclusively from our founding cultivator in a closed-circuit grow
+              environment.
+            </p>
+            <div class="terpene-mini-list">
+              <p class="terpene-mini-label">Primary Terpenes</p>
+              <div class="terpene-mini-tags">
+                <span class="terpene-tag">Myrcene 1.8%</span>
+                <span class="terpene-tag">Limonene 1.4%</span>
+                <span class="terpene-tag">β-Caryophyllene 0.9%</span>
+                <span class="terpene-tag">Linalool 0.7%</span>
+              </div>
+            </div>
+            <div class="featured-strain-ctas">
+              <a
+                href="index.html#cta-banner"
+                class="btn-primary"
+                id="flower-featured-request"
+                >Request This Cut</a
+              >
+              <a href="#strain-grid" class="btn-secondary" id="flower-view-all"
+                ><span>View All Strains</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STRAIN GRID -->
+    <section
+      id="strain-grid"
+      class="strain-grid-section"
+      aria-labelledby="strain-grid-heading"
+    >
+      <div class="container">
+        <div class="cat-section-header fade-up">
+          <p class="cat-section-label">
+            <i class="fa-solid fa-seedling"></i>&nbsp; The Collection
           </p>
-          <ul class="lab-checklist">
-            <li><i class="fa-solid fa-check"></i> Cannabinoid Potency Panel (THC, CBD, CBG, CBN)</li>
-            <li><i class="fa-solid fa-check"></i> Full Terpene Profile (GC-MS)</li>
-            <li><i class="fa-solid fa-check"></i> Residual Solvents Screening</li>
-            <li><i class="fa-solid fa-check"></i> Pesticide & Heavy Metal Analysis</li>
-            <li><i class="fa-solid fa-check"></i> Microbial Contaminants (mold, bacteria, yeast)</li>
-            <li><i class="fa-solid fa-check"></i> Certificate of Analysis (COA) issued per batch</li>
-          </ul>
-          <a href="index.html#cta-banner" class="btn-primary" id="flower-lab-cta">Access Lab Results</a>
+          <h2 id="strain-grid-heading" class="cat-section-title gold-text">
+            Active Cuts
+          </h2>
+          <p class="cat-section-subtitle">
+            Every strain is lab-verified, genetically documented, and
+            hand-selected by the council.
+          </p>
         </div>
-        <div class="lab-verify-metrics fade-in">
-          <div class="lab-metric-card">
-            <div class="lab-metric-icon"><i class="fa-solid fa-flask-vial"></i></div>
-            <div class="lab-metric-val">99.8%</div>
-            <div class="lab-metric-lbl">Purity Standard</div>
-          </div>
-          <div class="lab-metric-card">
-            <div class="lab-metric-icon"><i class="fa-solid fa-award"></i></div>
-            <div class="lab-metric-val">ISO 17025</div>
-            <div class="lab-metric-lbl">Certified Labs</div>
-          </div>
-          <div class="lab-metric-card">
-            <div class="lab-metric-icon"><i class="fa-solid fa-shield-halved"></i></div>
-            <div class="lab-metric-val">0</div>
-            <div class="lab-metric-lbl">Rejected Batches Released</div>
-          </div>
-          <div class="lab-metric-card">
-            <div class="lab-metric-icon"><i class="fa-solid fa-dna"></i></div>
-            <div class="lab-metric-val">6 Gen</div>
-            <div class="lab-metric-lbl">Max Genetic Refinement</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- VAULT NAV — other categories -->
-  <section class="vault-nav-section" aria-label="Other Vault Categories">
-    <div class="container">
-      <p class="cat-section-label" style="text-align:center;margin-bottom:3rem;">
-        <i class="fa-solid fa-vault"></i>&nbsp; Explore the Full Vault
-      </p>
-      <div class="vault-nav-grid">
-        <a href="concentrates.html" class="vault-nav-card" id="flower-to-concentrates" aria-label="Explore Liquid Gold Concentrates">
-          <img src="images/concentrate_hero.png" alt="Liquid Gold Concentrates" loading="lazy" />
-          <div class="vault-nav-card-body">
-            <span class="vault-nav-tag">Category 02</span>
-            <h3 class="vault-nav-title"><i class="fa-solid fa-flask"></i>&nbsp; Liquid Gold</h3>
-            <p>Hydrocarbon-extracted full-spectrum concentrates. Live resin, rosin, diamonds.</p>
-            <span class="vault-nav-link">Enter the Lab &nbsp;<i class="fa-solid fa-arrow-right"></i></span>
-          </div>
-        </a>
-        <a href="membership.html" class="vault-nav-card" id="flower-to-membership" aria-label="Explore Member Perks">
-          <img src="images/membership_hero.png" alt="Member Perks" loading="lazy" />
-          <div class="vault-nav-card-body">
-            <span class="vault-nav-tag">Category 03</span>
-            <h3 class="vault-nav-title"><i class="fa-solid fa-crown"></i>&nbsp; Member Perks</h3>
-            <p>Priority drops. Private consultations. Harvest event invitations.</p>
-            <span class="vault-nav-link">Apply for Access &nbsp;<i class="fa-solid fa-arrow-right"></i></span>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
+        <div class="strain-cards-grid" id="strain-cards-grid" role="list">
+          <!-- Strain 1 -->
+          <article
+            class="strain-product-card"
+            data-type="hybrid"
+            role="listitem"
+            aria-label="Cartel OG Strain"
+          >
+            <div class="spc-img-wrap">
+              <img
+                src="images/trichome_hero.png"
+                alt="Cartel OG cannabis bud"
+                loading="lazy"
+                class="spc-img"
+              />
+              <div class="spc-overlay"></div>
+              <span class="spc-type-badge hybrid">Hybrid</span>
+              <span class="spc-rarity ultra">Ultra Rare</span>
+            </div>
+            <div class="spc-body">
+              <div class="spc-header">
+                <h3 class="spc-name">Cartel OG</h3>
+                <div class="spc-thc">34.2% <span>THC</span></div>
+              </div>
+              <p class="spc-lineage">OG Kush × Diesel · Gen VI</p>
+              <p class="spc-desc">
+                Diesel-forward with black pepper, lemon rind and pine resin.
+                Full cerebral onset, body-anchoring finish.
+              </p>
+              <div class="spc-terpenes">
+                <span>Myrcene</span><span>Limonene</span
+                ><span>β-Caryophyllene</span>
+              </div>
+              <div class="spc-footer">
+                <div class="spc-avail available">
+                  <i class="fa-solid fa-circle"></i> In Rotation
+                </div>
+                <a
+                  href="index.html#cta-banner"
+                  class="spc-btn"
+                  aria-label="Request Cartel OG"
+                  >Request</a
+                >
+              </div>
+            </div>
+          </article>
 
-  <!-- FOOTER -->
-  <footer id="footer" role="contentinfo">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="brand-name">Dankery Cartel</div>
-          <div class="brand-sub">Elite Private Cannabis Club</div>
-          <p>A sovereign operation dedicated to the absolute pursuit of clean, potent, and genetically documented cannabis.</p>
-          <div class="footer-socials" aria-label="Social media links">
-            <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" class="social-link" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
-            <a href="#" class="social-link" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <!-- Strain 2 -->
+          <article
+            class="strain-product-card"
+            data-type="indica"
+            role="listitem"
+            aria-label="Black Throne Strain"
+          >
+            <div class="spc-img-wrap">
+              <img
+                src="images/luxury_packaging.png"
+                alt="Black Throne indica cannabis"
+                loading="lazy"
+                class="spc-img"
+              />
+              <div class="spc-overlay"></div>
+              <span class="spc-type-badge indica">Indica</span>
+              <span class="spc-rarity rare">Rare</span>
+            </div>
+            <div class="spc-body">
+              <div class="spc-header">
+                <h3 class="spc-name">Black Throne</h3>
+                <div class="spc-thc">31.8% <span>THC</span></div>
+              </div>
+              <p class="spc-lineage">Granddaddy Purple × Zkittlez · Gen IV</p>
+              <p class="spc-desc">
+                Dark grape, blueberry candy and damp earth. Heavy sedation with
+                euphoric introduction. Elite sleep cut.
+              </p>
+              <div class="spc-terpenes">
+                <span>Linalool</span><span>Myrcene</span><span>Ocimene</span>
+              </div>
+              <div class="spc-footer">
+                <div class="spc-avail available">
+                  <i class="fa-solid fa-circle"></i> In Rotation
+                </div>
+                <a
+                  href="index.html#cta-banner"
+                  class="spc-btn"
+                  aria-label="Request Black Throne"
+                  >Request</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- Strain 3 -->
+          <article
+            class="strain-product-card"
+            data-type="sativa"
+            role="listitem"
+            aria-label="Solar Flare Strain"
+          >
+            <div class="spc-img-wrap">
+              <img
+                src="images/trichome_hero.png"
+                alt="Solar Flare sativa cannabis"
+                loading="lazy"
+                class="spc-img"
+              />
+              <div class="spc-overlay"></div>
+              <span class="spc-type-badge sativa">Sativa</span>
+              <span class="spc-rarity common">Select</span>
+            </div>
+            <div class="spc-body">
+              <div class="spc-header">
+                <h3 class="spc-name">Solar Flare</h3>
+                <div class="spc-thc">29.5% <span>THC</span></div>
+              </div>
+              <p class="spc-lineage">Jack Herer × Durban Poison · Gen III</p>
+              <p class="spc-desc">
+                Tropical citrus and green mango with a sharp pine finish.
+                Energising, creative, and razor-focus inducing.
+              </p>
+              <div class="spc-terpenes">
+                <span>Terpinolene</span><span>Limonene</span><span>Pinene</span>
+              </div>
+              <div class="spc-footer">
+                <div class="spc-avail available">
+                  <i class="fa-solid fa-circle"></i> In Rotation
+                </div>
+                <a
+                  href="index.html#cta-banner"
+                  class="spc-btn"
+                  aria-label="Request Solar Flare"
+                  >Request</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- Strain 4 -->
+          <article
+            class="strain-product-card"
+            data-type="hybrid"
+            role="listitem"
+            aria-label="Phantom Runtz Strain"
+          >
+            <div class="spc-img-wrap">
+              <img
+                src="images/lounge_ambient.png"
+                alt="Phantom Runtz hybrid cannabis"
+                loading="lazy"
+                class="spc-img"
+              />
+              <div class="spc-overlay"></div>
+              <span class="spc-type-badge hybrid">Hybrid</span>
+              <span class="spc-rarity rare">Rare</span>
+            </div>
+            <div class="spc-body">
+              <div class="spc-header">
+                <h3 class="spc-name">Phantom Runtz</h3>
+                <div class="spc-thc">32.1% <span>THC</span></div>
+              </div>
+              <p class="spc-lineage">Runtz × Ghost OG · Gen V</p>
+              <p class="spc-desc">
+                Candy-forward sweetness over a creamy vanilla base. Balanced
+                euphoria with a long-lasting body ease.
+              </p>
+              <div class="spc-terpenes">
+                <span>Limonene</span><span>β-Caryophyllene</span
+                ><span>Linalool</span>
+              </div>
+              <div class="spc-footer">
+                <div class="spc-avail limited">
+                  <i class="fa-solid fa-circle"></i> Limited Drop
+                </div>
+                <a
+                  href="index.html#cta-banner"
+                  class="spc-btn"
+                  aria-label="Request Phantom Runtz"
+                  >Request</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- Strain 5 -->
+          <article
+            class="strain-product-card"
+            data-type="indica"
+            role="listitem"
+            aria-label="Obsidian Kush Strain"
+          >
+            <div class="spc-img-wrap">
+              <img
+                src="images/trichome_hero.png"
+                alt="Obsidian Kush indica cannabis"
+                loading="lazy"
+                class="spc-img"
+              />
+              <div class="spc-overlay"></div>
+              <span class="spc-type-badge indica">Indica</span>
+              <span class="spc-rarity ultra">Ultra Rare</span>
+            </div>
+            <div class="spc-body">
+              <div class="spc-header">
+                <h3 class="spc-name">Obsidian Kush</h3>
+                <div class="spc-thc">33.7% <span>THC</span></div>
+              </div>
+              <p class="spc-lineage">OG Kush × Black Afghan · Gen VI</p>
+              <p class="spc-desc">
+                Ancient kush lineage refined over six generations. Hash-forward
+                aroma, deep spice, cedar and black soil.
+              </p>
+              <div class="spc-terpenes">
+                <span>Myrcene</span><span>β-Caryophyllene</span
+                ><span>Humulene</span>
+              </div>
+              <div class="spc-footer">
+                <div class="spc-avail limited">
+                  <i class="fa-solid fa-circle"></i> Limited Drop
+                </div>
+                <a
+                  href="index.html#cta-banner"
+                  class="spc-btn"
+                  aria-label="Request Obsidian Kush"
+                  >Request</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- Strain 6 -->
+          <article
+            class="strain-product-card"
+            data-type="sativa"
+            role="listitem"
+            aria-label="Golden Meridian Strain"
+          >
+            <div class="spc-img-wrap">
+              <img
+                src="images/luxury_packaging.png"
+                alt="Golden Meridian sativa cannabis"
+                loading="lazy"
+                class="spc-img"
+              />
+              <div class="spc-overlay"></div>
+              <span class="spc-type-badge sativa">Sativa</span>
+              <span class="spc-rarity common">Select</span>
+            </div>
+            <div class="spc-body">
+              <div class="spc-header">
+                <h3 class="spc-name">Golden Meridian</h3>
+                <div class="spc-thc">28.4% <span>THC</span></div>
+              </div>
+              <p class="spc-lineage">Amnesia Haze × Golden Goat · Gen II</p>
+              <p class="spc-desc">
+                Bright lemon and white pepper with a subtle floral finish.
+                Uplifting, social, and long-duration head high.
+              </p>
+              <div class="spc-terpenes">
+                <span>Limonene</span><span>Terpinolene</span
+                ><span>Ocimene</span>
+              </div>
+              <div class="spc-footer">
+                <div class="spc-avail available">
+                  <i class="fa-solid fa-circle"></i> In Rotation
+                </div>
+                <a
+                  href="index.html#cta-banner"
+                  class="spc-btn"
+                  aria-label="Request Golden Meridian"
+                  >Request</a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+        <!-- end grid -->
+
+        <!-- Load More -->
+        <div class="load-more-wrap">
+          <button
+            class="load-more-btn"
+            id="load-more-strains"
+            aria-label="Load more strains"
+          >
+            View Full Archive &nbsp;<i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <p class="load-more-note">
+            12 cuts currently in rotation. Member access required to view all.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- LAB VERIFICATION SECTION -->
+    <section class="lab-verify-section" aria-labelledby="lab-heading">
+      <div class="container">
+        <div class="lab-verify-inner">
+          <div class="lab-verify-text fade-up">
+            <p class="cat-section-label">
+              <i class="fa-solid fa-microscope"></i>&nbsp; Compliance & Purity
+            </p>
+            <h2 id="lab-heading" class="cat-section-title">
+              Lab<br /><span class="gold-text">Verified.</span>
+            </h2>
+            <p class="lab-verify-body">
+              Every cut in the Sovereign Flower collection is submitted to
+              ISO/IEC 17025-certified third-party laboratories for full-panel
+              testing. No batch reaches the Vault without passing every metric.
+            </p>
+            <ul class="lab-checklist">
+              <li>
+                <i class="fa-solid fa-check"></i> Cannabinoid Potency Panel
+                (THC, CBD, CBG, CBN)
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Full Terpene Profile (GC-MS)
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Residual Solvents Screening
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Pesticide & Heavy Metal
+                Analysis
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Microbial Contaminants (mold,
+                bacteria, yeast)
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Certificate of Analysis (COA)
+                issued per batch
+              </li>
+            </ul>
+            <a
+              href="index.html#cta-banner"
+              class="btn-primary"
+              id="flower-lab-cta"
+              >Access Lab Results</a
+            >
+          </div>
+          <div class="lab-verify-metrics fade-in">
+            <div class="lab-metric-card">
+              <div class="lab-metric-icon">
+                <i class="fa-solid fa-flask-vial"></i>
+              </div>
+              <div class="lab-metric-val">99.8%</div>
+              <div class="lab-metric-lbl">Purity Standard</div>
+            </div>
+            <div class="lab-metric-card">
+              <div class="lab-metric-icon">
+                <i class="fa-solid fa-award"></i>
+              </div>
+              <div class="lab-metric-val">ISO 17025</div>
+              <div class="lab-metric-lbl">Certified Labs</div>
+            </div>
+            <div class="lab-metric-card">
+              <div class="lab-metric-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <div class="lab-metric-val">0</div>
+              <div class="lab-metric-lbl">Rejected Batches Released</div>
+            </div>
+            <div class="lab-metric-card">
+              <div class="lab-metric-icon"><i class="fa-solid fa-dna"></i></div>
+              <div class="lab-metric-val">6 Gen</div>
+              <div class="lab-metric-lbl">Max Genetic Refinement</div>
+            </div>
           </div>
         </div>
-        <div>
-          <h3 class="footer-col-title">The Vault</h3>
-          <ul class="footer-links" role="list">
-            <li><a href="flower.html">Sovereign Flower</a></li>
-            <li><a href="concentrates.html">Liquid Gold</a></li>
-            <li><a href="membership.html">Member Perks</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="footer-col-title">Navigate</h3>
-          <ul class="footer-links" role="list">
-            <li><a href="index.html#manifesto">The Manifesto</a></li>
-            <li><a href="index.html#terpene">Terpene Chemistry</a></li>
-            <li><a href="index.html#syndicate">The Syndicate</a></li>
-            <li><a href="index.html#faq">The Blackbook</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="footer-col-title">Compliance</h3>
-          <ul class="footer-links" role="list">
-            <li><a href="#">Lab Results (COA)</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Access</a></li>
-            <li><a href="#">Responsible Use</a></li>
-          </ul>
-        </div>
       </div>
-      <div class="footer-bottom">
-        <div class="footer-legal">
-          <p>&copy; 2024 Dankery Cartel. All rights reserved.<br/>
-          Cannabis products are for use by adults 21 years of age or older.
-          <a href="#">Privacy</a> &nbsp;·&nbsp; <a href="#">Terms</a> &nbsp;·&nbsp; <a href="#">Legal Compliance</a></p>
-        </div>
-        <div class="age-badge" aria-label="Age restriction: 21 and over">
-          <i class="fa-solid fa-shield-halved"></i> 21+ Only &nbsp;·&nbsp; Licensed &amp; Compliant
-        </div>
-      </div>
-    </div>
-  </footer>
+    </section>
 
-  <!-- SCRIPTS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
-  <script>
-    if (typeof gsap !== 'undefined') {
-      gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-    }
-  </script>
-  <script src="js/category.js"></script>
-</body>
+    <!-- VAULT NAV — other categories -->
+    <section class="vault-nav-section" aria-label="Other Vault Categories">
+      <div class="container">
+        <p
+          class="cat-section-label"
+          style="text-align: center; margin-bottom: 3rem"
+        >
+          <i class="fa-solid fa-vault"></i>&nbsp; Explore the Full Vault
+        </p>
+        <div class="vault-nav-grid">
+          <a
+            href="concentrates.html"
+            class="vault-nav-card"
+            id="flower-to-concentrates"
+            aria-label="Explore Liquid Gold Concentrates"
+          >
+            <img
+              src="images/concentrate_hero.png"
+              alt="Liquid Gold Concentrates"
+              loading="lazy"
+            />
+            <div class="vault-nav-card-body">
+              <span class="vault-nav-tag">Category 02</span>
+              <h3 class="vault-nav-title">
+                <i class="fa-solid fa-flask"></i>&nbsp; Liquid Gold
+              </h3>
+              <p>
+                Hydrocarbon-extracted full-spectrum concentrates. Live resin,
+                rosin, diamonds.
+              </p>
+              <span class="vault-nav-link"
+                >Enter the Lab &nbsp;<i class="fa-solid fa-arrow-right"></i
+              ></span>
+            </div>
+          </a>
+          <a
+            href="membership.html"
+            class="vault-nav-card"
+            id="flower-to-membership"
+            aria-label="Explore Member Perks"
+          >
+            <img
+              src="images/membership_hero.png"
+              alt="Member Perks"
+              loading="lazy"
+            />
+            <div class="vault-nav-card-body">
+              <span class="vault-nav-tag">Category 03</span>
+              <h3 class="vault-nav-title">
+                <i class="fa-solid fa-crown"></i>&nbsp; Member Perks
+              </h3>
+              <p>
+                Priority drops. Private consultations. Harvest event
+                invitations.
+              </p>
+              <span class="vault-nav-link"
+                >Apply for Access &nbsp;<i class="fa-solid fa-arrow-right"></i
+              ></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="footer" role="contentinfo">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="brand-name">Dankery Cartel</div>
+            <div class="brand-sub">Elite Private Cannabis Club</div>
+            <p>
+              A sovereign operation dedicated to the absolute pursuit of clean,
+              potent, and genetically documented cannabis.
+            </p>
+            <div class="footer-socials" aria-label="Social media links">
+              <a href="#" class="social-link" aria-label="Instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="#" class="social-link" aria-label="Telegram"
+                ><i class="fa-brands fa-telegram"></i
+              ></a>
+              <a href="#" class="social-link" aria-label="X / Twitter"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+            </div>
+          </div>
+          <div>
+            <h3 class="footer-col-title">The Vault</h3>
+            <ul class="footer-links" role="list">
+              <li><a href="flower.html">Sovereign Flower</a></li>
+              <li><a href="concentrates.html">Liquid Gold</a></li>
+              <li><a href="membership.html">Member Perks</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="footer-col-title">Navigate</h3>
+            <ul class="footer-links" role="list">
+              <li><a href="index.html#manifesto">The Manifesto</a></li>
+              <li><a href="index.html#terpene">Terpene Chemistry</a></li>
+              <li><a href="index.html#syndicate">The Syndicate</a></li>
+              <li><a href="index.html#faq">The Blackbook</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="footer-col-title">Compliance</h3>
+            <ul class="footer-links" role="list">
+              <li><a href="#">Lab Results (COA)</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Access</a></li>
+              <li><a href="#">Responsible Use</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-legal">
+            <p>
+              &copy; 2024 Dankery Cartel. All rights reserved.<br />
+              Cannabis products are for use by adults 21 years of age or older.
+              <a href="#">Privacy</a> &nbsp;·&nbsp;
+              <a href="#">Terms</a> &nbsp;·&nbsp;
+              <a href="#">Legal Compliance</a>
+            </p>
+          </div>
+          <div class="age-badge" aria-label="Age restriction: 21 and over">
+            <i class="fa-solid fa-shield-halved"></i> 21+ Only &nbsp;·&nbsp;
+            Licensed &amp; Compliant
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    <script>
+      if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
+        if (typeof ScrollToPlugin !== "undefined") {
+          gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+        } else {
+          gsap.registerPlugin(ScrollTrigger);
+        }
+      }
+    </script>
+    <script src="js/category.js"></script>
+  </body>
 </html>

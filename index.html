@@ -1,1016 +1,1253 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <!-- ═══════════════════════════════════════════════════
+  <head>
+    <!-- ═══════════════════════════════════════════════════
        META & SEO
   ════════════════════════════════════════════════════ -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#000000" />
-  <meta name="description" content="Dankery Cartel — An elite private cannabis club and luxury dispensary. Sovereign strains, uncut potency, exclusive membership. Apply for access." />
-  <meta name="keywords" content="premium cannabis, luxury dispensary, private cannabis club, elite strains, exclusive membership" />
-  <meta property="og:title" content="DANKERY CARTEL — Elite Private Cannabis Club" />
-  <meta property="og:description" content="Sovereign strains. Unrivaled potency. Elite curation. Welcome to the Syndicate." />
-  <meta property="og:type" content="website" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Dankery Cartel — An elite private cannabis club and luxury dispensary. Sovereign strains, uncut potency, exclusive membership. Apply for access."
+    />
+    <meta
+      name="keywords"
+      content="premium cannabis, luxury dispensary, private cannabis club, elite strains, exclusive membership"
+    />
+    <meta
+      property="og:title"
+      content="DANKERY CARTEL — Elite Private Cannabis Club"
+    />
+    <meta
+      property="og:description"
+      content="Sovereign strains. Unrivaled potency. Elite curation. Welcome to the Syndicate."
+    />
+    <meta property="og:type" content="website" />
 
-  <title>DANKERY CARTEL — Elite Private Cannabis Club</title>
+    <title>DANKERY CARTEL — Elite Private Cannabis Club</title>
 
-  <!-- ═══════════════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════════════
        FONTS
   ════════════════════════════════════════════════════ -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- ═══════════════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════════════
        ICONS
   ════════════════════════════════════════════════════ -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
-  <!-- ═══════════════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════════════
        STYLESHEET
   ════════════════════════════════════════════════════ -->
-  <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
 
-  <!-- Mobile nav styles -->
-  <style>
-    @media (max-width: 768px) {
-      .nav-links.mobile-open {
-        display: flex !important;
-        flex-direction: column;
-        position: fixed;
-        top: 0; left: 0; right: 0; bottom: 0;
-        background: rgba(0,0,0,0.97);
-        backdrop-filter: blur(20px);
-        align-items: center;
-        justify-content: center;
-        gap: 2.5rem;
-        z-index: 999;
+    <!-- Mobile nav styles -->
+    <style>
+      @media (max-width: 768px) {
+        .nav-links.mobile-open {
+          display: flex !important;
+          flex-direction: column;
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(0, 0, 0, 0.97);
+          backdrop-filter: blur(20px);
+          align-items: center;
+          justify-content: center;
+          gap: 2.5rem;
+          z-index: 999;
+        }
+        .nav-links.mobile-open a {
+          font-size: 1.2rem;
+          letter-spacing: 0.3em;
+          color: var(--gold-base);
+        }
       }
-      .nav-links.mobile-open a {
-        font-size: 1.2rem;
-        letter-spacing: 0.3em;
-        color: var(--gold-base);
-      }
-    }
-  </style>
-</head>
+    </style>
+  </head>
 
-<body>
-
-  <!-- ═══════════════════════════════════════════════════
+  <body>
+    <!-- ═══════════════════════════════════════════════════
        CUSTOM CURSOR
   ════════════════════════════════════════════════════ -->
-  <div class="cursor-dot" aria-hidden="true"></div>
-  <div class="cursor-ring" aria-hidden="true"></div>
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
 
-  <!-- ═══════════════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════════════
        1. AGE GATE
   ════════════════════════════════════════════════════ -->
-  <div id="age-gate" role="dialog" aria-modal="true" aria-labelledby="age-gate-title">
-    <div class="age-gate-inner">
-      <i class="fa-solid fa-crown age-gate-crown" aria-hidden="true"></i>
-      <div class="age-gate-brand">Dankery Cartel</div>
-      <div class="age-gate-sub">Elite Private Cannabis Club</div>
-      <div class="age-gate-line"></div>
-      <h1 id="age-gate-title" class="age-gate-title gold-text">Age Verification Required</h1>
-      <p class="age-gate-desc">
-        Entry to the Cartel is restricted to adults of legal age.<br />
-        You must be <strong>21 years or older</strong> to enter this establishment.<br />
-        By entering, you confirm compliance with your local cannabis laws.
-      </p>
-      <div class="age-gate-btns">
-        <button id="age-yes" class="btn-age-yes">I Am 21+ — Enter</button>
-        <button id="age-no" class="btn-age-no">Exit</button>
+    <div
+      id="age-gate"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="age-gate-title"
+    >
+      <div class="age-gate-inner">
+        <i class="fa-solid fa-crown age-gate-crown" aria-hidden="true"></i>
+        <div class="age-gate-brand">Dankery Cartel</div>
+        <div class="age-gate-sub">Elite Private Cannabis Club</div>
+        <div class="age-gate-line"></div>
+        <h1 id="age-gate-title" class="age-gate-title gold-text">
+          Age Verification Required
+        </h1>
+        <p class="age-gate-desc">
+          Entry to the Cartel is restricted to adults of legal age.<br />
+          You must be <strong>21 years or older</strong> to enter this
+          establishment.<br />
+          By entering, you confirm compliance with your local cannabis laws.
+        </p>
+        <div class="age-gate-btns">
+          <button id="age-yes" class="btn-age-yes">I Am 21+ — Enter</button>
+          <button id="age-no" class="btn-age-no">Exit</button>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- ═══════════════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════════════
        2. NAVBAR
   ════════════════════════════════════════════════════ -->
-  <nav id="navbar" role="navigation" aria-label="Main Navigation">
-    <a href="#hero" class="nav-logo" aria-label="Dankery Cartel Home">
-      <span class="nav-logo-main">Dankery Cartel</span>
-      <span class="nav-logo-sub">Elite Private Club &nbsp;·&nbsp; Est. MMXXI</span>
-    </a>
+    <nav id="navbar" role="navigation" aria-label="Main Navigation">
+      <a href="#hero" class="nav-logo" aria-label="Dankery Cartel Home">
+        <span class="nav-logo-main">Dankery Cartel</span>
+        <span class="nav-logo-sub"
+          >Elite Private Club &nbsp;·&nbsp; Est. MMXXI</span
+        >
+      </a>
 
-    <ul class="nav-links" role="list">
-      <li><a href="#manifesto">Manifesto</a></li>
-      <li><a href="#vault">The Vault</a></li>
-      <li><a href="#terpene">Genetics</a></li>
-      <li><a href="#syndicate">Syndicate</a></li>
-      <li><a href="#faq">Blackbook</a></li>
-    </ul>
+      <ul class="nav-links" role="list">
+        <li><a href="#hero">Manifesto</a></li>
+        <li><a href="#vault">The Vault</a></li>
+        <li><a href="#terpene">Genetics</a></li>
+        <li><a href="#syndicate">Syndicate</a></li>
+        <li><a href="#faq">Blackbook</a></li>
+      </ul>
 
-    <a href="#cta-banner" id="nav-cta" class="btn-vault">Enter Vault</a>
+      <a href="#cta-banner" id="nav-cta" class="btn-vault">Enter Vault</a>
 
-    <button class="nav-hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </nav>
+      <button
+        class="nav-hamburger"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
 
-  <!-- ═══════════════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════════════
        3. HERO
   ════════════════════════════════════════════════════ -->
-  <section id="hero" aria-label="Hero Section">
-    <!-- Background -->
-    <div class="hero-bg" aria-hidden="true"></div>
-    <div class="hero-bg-overlay" aria-hidden="true"></div>
+    <section id="hero" aria-label="Hero Section">
+      <!-- Background -->
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-bg-overlay" aria-hidden="true"></div>
 
-    <!-- Floating smoke particles (GSAP-animated) -->
-    <div class="smoke-particle" aria-hidden="true" style="width:300px;height:300px;top:20%;left:15%"></div>
-    <div class="smoke-particle" aria-hidden="true" style="width:400px;height:400px;top:40%;right:10%"></div>
-    <div class="smoke-particle" aria-hidden="true" style="width:200px;height:200px;top:70%;left:40%"></div>
-    <div class="smoke-particle" aria-hidden="true" style="width:250px;height:250px;top:10%;right:30%"></div>
+      <!-- Floating smoke particles (GSAP-animated) -->
+      <div
+        class="smoke-particle"
+        aria-hidden="true"
+        style="width: 300px; height: 300px; top: 20%; left: 15%"
+      ></div>
+      <div
+        class="smoke-particle"
+        aria-hidden="true"
+        style="width: 400px; height: 400px; top: 40%; right: 10%"
+      ></div>
+      <div
+        class="smoke-particle"
+        aria-hidden="true"
+        style="width: 200px; height: 200px; top: 70%; left: 40%"
+      ></div>
+      <div
+        class="smoke-particle"
+        aria-hidden="true"
+        style="width: 250px; height: 250px; top: 10%; right: 30%"
+      ></div>
 
-    <!-- Content -->
-    <div class="hero-content">
-      <p class="hero-eyebrow" aria-label="Exclusive · Private · Sovereign">
-        Exclusive &nbsp;·&nbsp; Private &nbsp;·&nbsp; Sovereign
-      </p>
+      <!-- Content -->
+      <div class="hero-content">
+        <p class="hero-eyebrow" aria-label="Exclusive · Private · Sovereign">
+          Exclusive &nbsp;·&nbsp; Private &nbsp;·&nbsp; Sovereign
+        </p>
 
-      <h1 class="hero-title" aria-label="Dankery Cartel">
-        Dankery
-        <span class="word-cartel">Cartel</span>
-      </h1>
+        <h1 class="hero-title" aria-label="Dankery Cartel">
+          Dankery
+          <span class="word-cartel">Cartel</span>
+        </h1>
 
-      <p class="hero-tagline">
-        "Unrivaled Potency. Elite Curation. The Syndicate Awaits."
-      </p>
+        <p class="hero-tagline">
+          "Unrivaled Potency. Elite Curation. The Syndicate Awaits."
+        </p>
 
-      <div class="hero-ctas">
-        <a href="#cta-banner" id="hero-cta-primary" class="btn-primary" aria-label="Secure the Drop">
-          Secure the Drop
-        </a>
-        <a href="#manifesto" id="hero-cta-secondary" class="btn-secondary" aria-label="Read The Manifesto">
-          <span>The Manifesto</span>
-        </a>
+        <div class="hero-ctas">
+          <a
+            href="#cta-banner"
+            id="hero-cta-primary"
+            class="btn-primary"
+            aria-label="Secure the Drop"
+          >
+            Secure the Drop
+          </a>
+          <a
+            href="#manifesto"
+            id="hero-cta-secondary"
+            class="btn-secondary"
+            aria-label="Read The Manifesto"
+          >
+            <span>The Manifesto</span>
+          </a>
+        </div>
       </div>
-    </div>
 
-    <!-- Scroll indicator -->
-    <div class="hero-scroll-indicator" aria-hidden="true">
-      <div class="scroll-line"></div>
-      <span class="scroll-text">Scroll</span>
-    </div>
-  </section>
+      <!-- Scroll indicator -->
+      <div class="hero-scroll-indicator" aria-hidden="true">
+        <div class="scroll-line"></div>
+        <span class="scroll-text">Scroll</span>
+      </div>
+    </section>
 
-  <!-- ═══════════════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════════════
        4. MARQUEE STRIP
   ════════════════════════════════════════════════════ -->
-  <div id="marquee-strip" aria-hidden="true">
-    <div class="marquee-track">
-      <!-- Repeated twice for seamless loop -->
-      <div class="marquee-item">Live Drops</div>
-      <div class="marquee-item">Exclusive Harvest</div>
-      <div class="marquee-item">Members Only</div>
-      <div class="marquee-item">Sovereign Strains</div>
-      <div class="marquee-item">Liquid Gold</div>
-      <div class="marquee-item">The Cartel</div>
-      <div class="marquee-item">Uncut Potency</div>
-      <div class="marquee-item">The Syndicate</div>
-      <div class="marquee-item">Live Drops</div>
-      <div class="marquee-item">Exclusive Harvest</div>
-      <div class="marquee-item">Members Only</div>
-      <div class="marquee-item">Sovereign Strains</div>
-      <div class="marquee-item">Liquid Gold</div>
-      <div class="marquee-item">The Cartel</div>
-      <div class="marquee-item">Uncut Potency</div>
-      <div class="marquee-item">The Syndicate</div>
+    <div id="marquee-strip" aria-hidden="true">
+      <div class="marquee-track">
+        <!-- Repeated twice for seamless loop -->
+        <div class="marquee-item">Live Drops</div>
+        <div class="marquee-item">Exclusive Harvest</div>
+        <div class="marquee-item">Members Only</div>
+        <div class="marquee-item">Sovereign Strains</div>
+        <div class="marquee-item">Liquid Gold</div>
+        <div class="marquee-item">The Cartel</div>
+        <div class="marquee-item">Uncut Potency</div>
+        <div class="marquee-item">The Syndicate</div>
+        <div class="marquee-item">Live Drops</div>
+        <div class="marquee-item">Exclusive Harvest</div>
+        <div class="marquee-item">Members Only</div>
+        <div class="marquee-item">Sovereign Strains</div>
+        <div class="marquee-item">Liquid Gold</div>
+        <div class="marquee-item">The Cartel</div>
+        <div class="marquee-item">Uncut Potency</div>
+        <div class="marquee-item">The Syndicate</div>
+      </div>
     </div>
-  </div>
 
-  <!-- ═══════════════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════════════
        5. THE MANIFESTO
   ════════════════════════════════════════════════════ -->
-  <section id="manifesto" aria-labelledby="manifesto-heading">
-    <div class="container">
-      <div class="manifesto-inner">
+    <section id="manifesto" aria-labelledby="manifesto-heading">
+      <div class="container">
+        <div class="manifesto-inner">
+          <!-- Text -->
+          <div class="manifesto-text">
+            <p class="manifesto-label">
+              <i class="fa-solid fa-key" aria-hidden="true"></i>
+              &nbsp; The Manifesto
+            </p>
 
-        <!-- Text -->
-        <div class="manifesto-text">
-          <p class="manifesto-label">
-            <i class="fa-solid fa-key" aria-hidden="true"></i>
-            &nbsp; The Manifesto
-          </p>
+            <h2 id="manifesto-heading" class="manifesto-heading fade-up">
+              <span class="gold-text">Born</span> in<br />
+              Darkness.<br />
+              Refined in<br />
+              <span class="gold-text">Gold.</span>
+            </h2>
 
-          <h2 id="manifesto-heading" class="manifesto-heading fade-up">
-            <span class="gold-text">Born</span> in<br />
-            Darkness.<br />
-            Refined in<br />
-            <span class="gold-text">Gold.</span>
-          </h2>
+            <p class="manifesto-body fade-up">
+              We didn't build a dispensary. We built a
+              <strong>sovereign operation</strong> — a covert network of the
+              world's most obsessive cultivators, extraction artists, and
+              connoisseurs who refuse to accept anything less than absolute
+              perfection.
+            </p>
 
-          <p class="manifesto-body fade-up">
-            We didn't build a dispensary. We built a <strong>sovereign operation</strong> — a
-            covert network of the world's most obsessive cultivators, extraction artists, and
-            connoisseurs who refuse to accept anything less than absolute perfection.
-          </p>
+            <p class="manifesto-body fade-up">
+              Every gram that moves through the Cartel has been
+              <strong>laboratory-verified, genetically documented</strong>, and
+              hand-selected by our council. No mid. No compromise. No
+              exceptions.
+            </p>
 
-          <p class="manifesto-body fade-up">
-            Every gram that moves through the Cartel has been <strong>laboratory-verified,
-            genetically documented</strong>, and hand-selected by our council. No mid.
-            No compromise. No exceptions.
-          </p>
+            <p class="manifesto-body fade-up">
+              This isn't a club you find.
+              <strong>This is a club that finds you.</strong>
+            </p>
 
-          <p class="manifesto-body fade-up">
-            This isn't a club you find. <strong>This is a club that finds you.</strong>
-          </p>
-
-          <p class="manifesto-signature fade-up">The Council — Dankery Cartel</p>
-        </div>
-
-        <!-- Visual -->
-        <div class="manifesto-visual fade-in">
-          <div class="manifesto-img-wrap">
-            <img src="images/luxury_packaging.png"
-                 alt="Dankery Cartel luxury matte black packaging with gold embossing"
-                 loading="lazy" />
+            <p class="manifesto-signature fade-up">
+              The Council — Dankery Cartel
+            </p>
           </div>
-          <div class="manifesto-badge scale-in">
-            <div class="badge-number">100%</div>
-            <div class="badge-text">Lab Verified<br />Pure Extract</div>
+
+          <!-- Visual -->
+          <div class="manifesto-visual fade-in">
+            <div class="manifesto-img-wrap">
+              <img
+                src="images/luxury_packaging.webp"
+                alt="Dankery Cartel luxury matte black packaging with gold embossing"
+                loading="lazy"
+              />
+            </div>
+            <div class="manifesto-badge scale-in">
+              <div class="badge-number">100%</div>
+              <div class="badge-text">Lab Verified<br />Pure Extract</div>
+            </div>
           </div>
         </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ═══════════════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════════════
        6. THE VAULT — CURATED COLLECTION
   ════════════════════════════════════════════════════ -->
-  <section id="vault" aria-labelledby="vault-heading">
-    <div class="container">
+    <section id="vault" aria-labelledby="vault-heading">
+      <div class="container">
+        <div class="section-header fade-up">
+          <p class="section-label">
+            <i class="fa-solid fa-vault" aria-hidden="true"></i> &nbsp; The
+            Collection
+          </p>
+          <h2 id="vault-heading" class="section-title gold-text">The Vault</h2>
+          <p class="section-subtitle">
+            Three pillars of the Cartel experience.
+          </p>
+        </div>
 
-      <div class="section-header fade-up">
-        <p class="section-label">
-          <i class="fa-solid fa-vault" aria-hidden="true"></i> &nbsp;
-          The Collection
-        </p>
-        <h2 id="vault-heading" class="section-title gold-text">The Vault</h2>
-        <p class="section-subtitle">Three pillars of the Cartel experience.</p>
+        <div class="vault-grid">
+          <!-- Card 1: Flower -->
+          <article class="vault-card" aria-label="Sovereign Flower Collection">
+            <img
+              src="images/trichome_hero.webp"
+              alt="Crystalline trichomes on premium cannabis flower"
+              class="vault-card-img"
+              loading="lazy"
+            />
+            <div class="vault-card-body">
+              <div class="vault-card-icon">
+                <i class="fa-solid fa-leaf" aria-hidden="true"></i>
+              </div>
+              <p class="vault-card-tag">Category 01</p>
+              <h3 class="vault-card-title">Sovereign Flower</h3>
+              <p class="vault-card-desc">
+                Hand-selected, single-origin cuts grown under controlled
+                full-spectrum environments. Every batch is terpene-profiled,
+                trimmed by hand, and cured to absolute peak expression. No bulk.
+                No filler. Only the cut.
+              </p>
+              <a
+                href="flower.html"
+                class="vault-card-link"
+                aria-label="Explore Sovereign Flower"
+              >
+                Explore the Cut &nbsp;<i
+                  class="fa-solid fa-arrow-right"
+                  aria-hidden="true"
+                ></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 2: Concentrates -->
+          <article class="vault-card" aria-label="Liquid Gold Concentrates">
+            <img
+              src="images/concentrate_hero.png"
+              alt="Premium cannabis concentrate in luxury packaging"
+              class="vault-card-img"
+              loading="lazy"
+            />
+            <div class="vault-card-body">
+              <div class="vault-card-icon">
+                <i class="fa-solid fa-flask" aria-hidden="true"></i>
+              </div>
+              <p class="vault-card-tag">Category 02</p>
+              <h3 class="vault-card-title">Liquid Gold</h3>
+              <p class="vault-card-desc">
+                Hydrocarbon-extracted, full-spectrum concentrates. Live resin
+                badder, diamond-studded sauce, and solventless rosin — crafted
+                in-house by our extraction council. Purity above 95%. No
+                exceptions.
+              </p>
+              <a
+                href="concentrates.html"
+                class="vault-card-link"
+                aria-label="Explore Liquid Gold"
+              >
+                Enter the Lab &nbsp;<i
+                  class="fa-solid fa-arrow-right"
+                  aria-hidden="true"
+                ></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 3: Member Perks -->
+          <article class="vault-card" aria-label="Member Perks and Privileges">
+            <img
+              src="images/lounge_ambient.webp"
+              alt="Exclusive Dankery Cartel members lounge"
+              class="vault-card-img"
+              loading="lazy"
+            />
+            <div class="vault-card-body">
+              <div class="vault-card-icon">
+                <i class="fa-solid fa-crown" aria-hidden="true"></i>
+              </div>
+              <p class="vault-card-tag">Category 03</p>
+              <h3 class="vault-card-title">Member Perks</h3>
+              <p class="vault-card-desc">
+                Priority access to exclusive drops before public release.
+                Curated delivery, private consultation with our cultivators, lab
+                result access, and invitations to harvest events. The Cartel
+                protects its own.
+              </p>
+              <a
+                href="membership.html"
+                class="vault-card-link"
+                aria-label="Apply for membership"
+              >
+                Apply for Access &nbsp;<i
+                  class="fa-solid fa-arrow-right"
+                  aria-hidden="true"
+                ></i>
+              </a>
+            </div>
+          </article>
+        </div>
       </div>
+    </section>
 
-      <div class="vault-grid">
-
-        <!-- Card 1: Flower -->
-        <article class="vault-card" aria-label="Sovereign Flower Collection">
-          <img src="images/trichome_hero.png"
-               alt="Crystalline trichomes on premium cannabis flower"
-               class="vault-card-img"
-               loading="lazy" />
-          <div class="vault-card-body">
-            <div class="vault-card-icon">
-              <i class="fa-solid fa-leaf" aria-hidden="true"></i>
-            </div>
-            <p class="vault-card-tag">Category 01</p>
-            <h3 class="vault-card-title">Sovereign Flower</h3>
-            <p class="vault-card-desc">
-              Hand-selected, single-origin cuts grown under controlled full-spectrum
-              environments. Every batch is terpene-profiled, trimmed by hand, and
-              cured to absolute peak expression. No bulk. No filler. Only the cut.
-            </p>
-            <a href="flower.html" class="vault-card-link" aria-label="Explore Sovereign Flower">
-              Explore the Cut &nbsp;<i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-            </a>
-          </div>
-        </article>
-
-        <!-- Card 2: Concentrates -->
-        <article class="vault-card" aria-label="Liquid Gold Concentrates">
-          <img src="images/luxury_packaging.png"
-               alt="Premium cannabis concentrate in luxury packaging"
-               class="vault-card-img"
-               loading="lazy" />
-          <div class="vault-card-body">
-            <div class="vault-card-icon">
-              <i class="fa-solid fa-flask" aria-hidden="true"></i>
-            </div>
-            <p class="vault-card-tag">Category 02</p>
-            <h3 class="vault-card-title">Liquid Gold</h3>
-            <p class="vault-card-desc">
-              Hydrocarbon-extracted, full-spectrum concentrates. Live resin badder,
-              diamond-studded sauce, and solventless rosin — crafted in-house by
-              our extraction council. Purity above 95%. No exceptions.
-            </p>
-            <a href="concentrates.html" class="vault-card-link" aria-label="Explore Liquid Gold">
-              Enter the Lab &nbsp;<i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-            </a>
-          </div>
-        </article>
-
-        <!-- Card 3: Member Perks -->
-        <article class="vault-card" aria-label="Member Perks and Privileges">
-          <img src="images/lounge_ambient.png"
-               alt="Exclusive Dankery Cartel members lounge"
-               class="vault-card-img"
-               loading="lazy" />
-          <div class="vault-card-body">
-            <div class="vault-card-icon">
-              <i class="fa-solid fa-crown" aria-hidden="true"></i>
-            </div>
-            <p class="vault-card-tag">Category 03</p>
-            <h3 class="vault-card-title">Member Perks</h3>
-            <p class="vault-card-desc">
-              Priority access to exclusive drops before public release.
-              Curated delivery, private consultation with our cultivators,
-              lab result access, and invitations to harvest events.
-              The Cartel protects its own.
-            </p>
-            <a href="membership.html" class="vault-card-link" aria-label="Apply for membership">
-              Apply for Access &nbsp;<i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-            </a>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════════════
        7. TERPENE CHEMISTRY
   ════════════════════════════════════════════════════ -->
-  <section id="terpene" aria-labelledby="terpene-heading">
-    <div class="container">
-
-      <div class="section-header fade-up">
-        <p class="section-label">
-          <i class="fa-solid fa-dna" aria-hidden="true"></i> &nbsp;
-          Genetic Intelligence
-        </p>
-        <h2 id="terpene-heading" class="section-title gold-text">Terpene<br />Chemistry</h2>
-        <p class="section-subtitle">The science behind sovereign potency.</p>
-      </div>
-
-      <div class="terpene-grid" style="margin-top: 4rem;">
-
-        <!-- Left: Data Table -->
-        <div class="terpene-table fade-up">
-          <div class="terpene-table-header">
-            <span>Compound</span>
-            <span>%</span>
-            <span>Profile</span>
-            <span>Rarity</span>
-          </div>
-
-          <div class="terpene-row">
-            <span class="terpene-name">Myrcene</span>
-            <span class="terpene-badge-val">1.8%</span>
-            <span class="terpene-flavor">Mango · Earth</span>
-            <span class="terpene-dot"></span>
-          </div>
-          <div class="terpene-row">
-            <span class="terpene-name">Limonene</span>
-            <span class="terpene-badge-val">1.4%</span>
-            <span class="terpene-flavor">Citrus · Lift</span>
-            <span class="terpene-dot"></span>
-          </div>
-          <div class="terpene-row">
-            <span class="terpene-name">β-Caryophyllene</span>
-            <span class="terpene-badge-val">0.9%</span>
-            <span class="terpene-flavor">Pepper · Spice</span>
-            <span class="terpene-dot rare"></span>
-          </div>
-          <div class="terpene-row">
-            <span class="terpene-name">Linalool</span>
-            <span class="terpene-badge-val">0.7%</span>
-            <span class="terpene-flavor">Floral · Calm</span>
-            <span class="terpene-dot rare"></span>
-          </div>
-          <div class="terpene-row">
-            <span class="terpene-name">Terpinolene</span>
-            <span class="terpene-badge-val">0.5%</span>
-            <span class="terpene-flavor">Pine · Fresh</span>
-            <span class="terpene-dot ultra"></span>
-          </div>
-          <div class="terpene-row">
-            <span class="terpene-name">Ocimene</span>
-            <span class="terpene-badge-val">0.3%</span>
-            <span class="terpene-flavor">Sweet · Woody</span>
-            <span class="terpene-dot ultra"></span>
-          </div>
+    <section id="terpene" aria-labelledby="terpene-heading">
+      <div class="container">
+        <div class="section-header fade-up">
+          <p class="section-label">
+            <i class="fa-solid fa-dna" aria-hidden="true"></i> &nbsp; Genetic
+            Intelligence
+          </p>
+          <h2 id="terpene-heading" class="section-title gold-text">
+            Terpene<br />Chemistry
+          </h2>
+          <p class="section-subtitle">The science behind sovereign potency.</p>
         </div>
 
-        <!-- Right: Flavor Bars + Strain Card -->
-        <div class="terpene-chart-wrap">
+        <div class="terpene-grid" style="margin-top: 4rem">
+          <!-- Left: Data Table -->
+          <div class="terpene-table fade-up">
+            <div class="terpene-table-header">
+              <span>Compound</span>
+              <span>%</span>
+              <span>Profile</span>
+              <span>Rarity</span>
+            </div>
 
-          <!-- Featured strain -->
-          <div class="strain-card fade-up">
-            <div class="strain-card-header">
-              <div>
-                <p style="font-size:0.55rem;letter-spacing:0.4em;text-transform:uppercase;color:var(--gold-muted);margin-bottom:0.4rem;">
-                  Featured Sovereign Cut
-                </p>
-                <h3 class="strain-name gold-text">Cartel OG</h3>
+            <div class="terpene-row">
+              <span class="terpene-name">Myrcene</span>
+              <span class="terpene-badge-val">1.8%</span>
+              <span class="terpene-flavor">Mango · Earth</span>
+              <span class="terpene-dot"></span>
+            </div>
+            <div class="terpene-row">
+              <span class="terpene-name">Limonene</span>
+              <span class="terpene-badge-val">1.4%</span>
+              <span class="terpene-flavor">Citrus · Lift</span>
+              <span class="terpene-dot"></span>
+            </div>
+            <div class="terpene-row">
+              <span class="terpene-name">β-Caryophyllene</span>
+              <span class="terpene-badge-val">0.9%</span>
+              <span class="terpene-flavor">Pepper · Spice</span>
+              <span class="terpene-dot rare"></span>
+            </div>
+            <div class="terpene-row">
+              <span class="terpene-name">Linalool</span>
+              <span class="terpene-badge-val">0.7%</span>
+              <span class="terpene-flavor">Floral · Calm</span>
+              <span class="terpene-dot rare"></span>
+            </div>
+            <div class="terpene-row">
+              <span class="terpene-name">Terpinolene</span>
+              <span class="terpene-badge-val">0.5%</span>
+              <span class="terpene-flavor">Pine · Fresh</span>
+              <span class="terpene-dot ultra"></span>
+            </div>
+            <div class="terpene-row">
+              <span class="terpene-name">Ocimene</span>
+              <span class="terpene-badge-val">0.3%</span>
+              <span class="terpene-flavor">Sweet · Woody</span>
+              <span class="terpene-dot ultra"></span>
+            </div>
+          </div>
+
+          <!-- Right: Flavor Bars + Strain Card -->
+          <div class="terpene-chart-wrap">
+            <!-- Featured strain -->
+            <div class="strain-card fade-up">
+              <div class="strain-card-header">
+                <div>
+                  <p
+                    style="
+                      font-size: 0.55rem;
+                      letter-spacing: 0.4em;
+                      text-transform: uppercase;
+                      color: var(--gold-muted);
+                      margin-bottom: 0.4rem;
+                    "
+                  >
+                    Featured Sovereign Cut
+                  </p>
+                  <h3 class="strain-name gold-text">Cartel OG</h3>
+                </div>
+                <span class="strain-type-badge">Hybrid</span>
               </div>
-              <span class="strain-type-badge">Hybrid</span>
-            </div>
 
-            <div class="strain-thc">
-              <span class="thc-num" id="thc-counter" data-count="34.2" data-suffix="%" data-decimals="1">34.2%</span>
-              <span class="thc-label">THC</span>
-            </div>
-            <p style="font-size:0.65rem;color:var(--text-muted);letter-spacing:0.2em;text-transform:uppercase;">
-              CBD: 0.08% &nbsp;·&nbsp; CBG: 1.2% &nbsp;·&nbsp; Total Cannabinoids: 36.1%
-            </p>
-
-            <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(212,175,55,0.1);">
-              <p style="font-size:0.7rem;font-style:italic;color:var(--text-muted);line-height:1.7;">
-                "A diesel-forward expression of our proprietary OG lineage, 
-                dialed in over six generations. Notes of black pepper, 
-                lemon rind, and pine resin. Full cerebral onset, 
-                body-anchoring finish."
+              <div class="strain-thc">
+                <span
+                  class="thc-num"
+                  id="thc-counter"
+                  data-count="34.2"
+                  data-suffix="%"
+                  data-decimals="1"
+                  >34.2%</span
+                >
+                <span class="thc-label">THC</span>
+              </div>
+              <p
+                style="
+                  font-size: 0.65rem;
+                  color: var(--text-muted);
+                  letter-spacing: 0.2em;
+                  text-transform: uppercase;
+                "
+              >
+                CBD: 0.08% &nbsp;·&nbsp; CBG: 1.2% &nbsp;·&nbsp; Total
+                Cannabinoids: 36.1%
               </p>
+
+              <div
+                style="
+                  margin-top: 1.5rem;
+                  padding-top: 1.5rem;
+                  border-top: 1px solid rgba(212, 175, 55, 0.1);
+                "
+              >
+                <p
+                  style="
+                    font-size: 0.7rem;
+                    font-style: italic;
+                    color: var(--text-muted);
+                    line-height: 1.7;
+                  "
+                >
+                  "A diesel-forward expression of our proprietary OG lineage,
+                  dialed in over six generations. Notes of black pepper, lemon
+                  rind, and pine resin. Full cerebral onset, body-anchoring
+                  finish."
+                </p>
+              </div>
+            </div>
+
+            <!-- Flavor bars -->
+            <div class="flavor-bar-group fade-up">
+              <p
+                style="
+                  font-size: 0.6rem;
+                  letter-spacing: 0.4em;
+                  text-transform: uppercase;
+                  color: var(--gold-muted);
+                  margin-bottom: 1.2rem;
+                "
+              >
+                Flavor Intensity Matrix
+              </p>
+
+              <div>
+                <div class="flavor-bar-label">
+                  <span>Citrus</span><span>91%</span>
+                </div>
+                <div class="flavor-bar-track">
+                  <div
+                    class="flavor-bar-fill"
+                    style="--target-width: 91%"
+                    data-width="91"
+                  ></div>
+                </div>
+              </div>
+              <div style="margin-top: 1rem">
+                <div class="flavor-bar-label">
+                  <span>Diesel</span><span>84%</span>
+                </div>
+                <div class="flavor-bar-track">
+                  <div
+                    class="flavor-bar-fill"
+                    style="--target-width: 84%"
+                    data-width="84"
+                  ></div>
+                </div>
+              </div>
+              <div style="margin-top: 1rem">
+                <div class="flavor-bar-label">
+                  <span>Earth</span><span>67%</span>
+                </div>
+                <div class="flavor-bar-track">
+                  <div
+                    class="flavor-bar-fill"
+                    style="--target-width: 67%"
+                    data-width="67"
+                  ></div>
+                </div>
+              </div>
+              <div style="margin-top: 1rem">
+                <div class="flavor-bar-label">
+                  <span>Spice</span><span>52%</span>
+                </div>
+                <div class="flavor-bar-track">
+                  <div
+                    class="flavor-bar-fill"
+                    style="--target-width: 52%"
+                    data-width="52"
+                  ></div>
+                </div>
+              </div>
+              <div style="margin-top: 1rem">
+                <div class="flavor-bar-label">
+                  <span>Floral</span><span>38%</span>
+                </div>
+                <div class="flavor-bar-track">
+                  <div
+                    class="flavor-bar-fill"
+                    style="--target-width: 38%"
+                    data-width="38"
+                  ></div>
+                </div>
+              </div>
             </div>
           </div>
-
-          <!-- Flavor bars -->
-          <div class="flavor-bar-group fade-up">
-            <p style="font-size:0.6rem;letter-spacing:0.4em;text-transform:uppercase;color:var(--gold-muted);margin-bottom:1.2rem;">
-              Flavor Intensity Matrix
-            </p>
-
-            <div>
-              <div class="flavor-bar-label">
-                <span>Citrus</span><span>91%</span>
-              </div>
-              <div class="flavor-bar-track">
-                <div class="flavor-bar-fill" style="--target-width:91%;" data-width="91"></div>
-              </div>
-            </div>
-            <div style="margin-top:1rem;">
-              <div class="flavor-bar-label">
-                <span>Diesel</span><span>84%</span>
-              </div>
-              <div class="flavor-bar-track">
-                <div class="flavor-bar-fill" style="--target-width:84%;" data-width="84"></div>
-              </div>
-            </div>
-            <div style="margin-top:1rem;">
-              <div class="flavor-bar-label">
-                <span>Earth</span><span>67%</span>
-              </div>
-              <div class="flavor-bar-track">
-                <div class="flavor-bar-fill" style="--target-width:67%;" data-width="67"></div>
-              </div>
-            </div>
-            <div style="margin-top:1rem;">
-              <div class="flavor-bar-label">
-                <span>Spice</span><span>52%</span>
-              </div>
-              <div class="flavor-bar-track">
-                <div class="flavor-bar-fill" style="--target-width:52%;" data-width="52"></div>
-              </div>
-            </div>
-            <div style="margin-top:1rem;">
-              <div class="flavor-bar-label">
-                <span>Floral</span><span>38%</span>
-              </div>
-              <div class="flavor-bar-track">
-                <div class="flavor-bar-fill" style="--target-width:38%;" data-width="38"></div>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ═══════════════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════════════
        8. THE SYNDICATE — STATS
   ════════════════════════════════════════════════════ -->
-  <section id="syndicate" aria-labelledby="syndicate-heading">
-    <div class="syndicate-bg-text" aria-hidden="true">Cartel</div>
+    <section id="syndicate" aria-labelledby="syndicate-heading">
+      <div class="syndicate-bg-text" aria-hidden="true">Cartel</div>
 
-    <div class="container">
-      <div class="section-header fade-up">
-        <p class="section-label">
-          <i class="fa-solid fa-users-between-lines" aria-hidden="true"></i> &nbsp;
-          By the Numbers
-        </p>
-        <h2 id="syndicate-heading" class="section-title gold-text">The Syndicate</h2>
-        <p class="section-subtitle">
-          A closed network. Measured in purity, not popularity.
-        </p>
+      <div class="container">
+        <div class="section-header fade-up">
+          <p class="section-label">
+            <i class="fa-solid fa-users-between-lines" aria-hidden="true"></i>
+            &nbsp; By the Numbers
+          </p>
+          <h2 id="syndicate-heading" class="section-title gold-text">
+            The Syndicate
+          </h2>
+          <p class="section-subtitle">
+            A closed network. Measured in purity, not popularity.
+          </p>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fa-solid fa-users" aria-hidden="true"></i>
+            </div>
+            <div class="stat-number" data-count="847" data-suffix="">
+              <span id="stat-members">847</span>
+            </div>
+            <div class="stat-label">Verified<br />Members</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fa-solid fa-award" aria-hidden="true"></i>
+            </div>
+            <div class="stat-number" data-count="34" data-suffix="">
+              <span id="stat-awards">34</span>
+            </div>
+            <div class="stat-label">Award-Winning<br />Cuts in Rotation</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fa-solid fa-microscope" aria-hidden="true"></i>
+            </div>
+            <div
+              class="stat-number"
+              data-count="99.8"
+              data-suffix="%"
+              data-decimals="1"
+            >
+              <span id="stat-purity">99.8%</span>
+            </div>
+            <div class="stat-label">Laboratory<br />Purity Standard</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fa-solid fa-seedling" aria-hidden="true"></i>
+            </div>
+            <div class="stat-number" data-count="6" data-suffix="">
+              <span id="stat-generations">6</span>
+            </div>
+            <div class="stat-label">Generations of<br />Genetic Refinement</div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="stats-grid">
-
-        <div class="stat-card">
-          <div class="stat-icon"><i class="fa-solid fa-users" aria-hidden="true"></i></div>
-          <div class="stat-number" data-count="847" data-suffix="">
-            <span id="stat-members">847</span>
-          </div>
-          <div class="stat-label">Verified<br />Members</div>
-        </div>
-
-        <div class="stat-card">
-          <div class="stat-icon"><i class="fa-solid fa-award" aria-hidden="true"></i></div>
-          <div class="stat-number" data-count="34" data-suffix="">
-            <span id="stat-awards">34</span>
-          </div>
-          <div class="stat-label">Award-Winning<br />Cuts in Rotation</div>
-        </div>
-
-        <div class="stat-card">
-          <div class="stat-icon"><i class="fa-solid fa-microscope" aria-hidden="true"></i></div>
-          <div class="stat-number" data-count="99.8" data-suffix="%" data-decimals="1">
-            <span id="stat-purity">99.8%</span>
-          </div>
-          <div class="stat-label">Laboratory<br />Purity Standard</div>
-        </div>
-
-        <div class="stat-card">
-          <div class="stat-icon"><i class="fa-solid fa-seedling" aria-hidden="true"></i></div>
-          <div class="stat-number" data-count="6" data-suffix="">
-            <span id="stat-generations">6</span>
-          </div>
-          <div class="stat-label">Generations of<br />Genetic Refinement</div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════════════
        9. MEMBERS' FEEDBACK
   ════════════════════════════════════════════════════ -->
-  <section id="reviews" aria-labelledby="reviews-heading">
-    <div class="container">
+    <section id="reviews" aria-labelledby="reviews-heading">
+      <div class="container">
+        <div class="section-header fade-up">
+          <p class="section-label">
+            <i class="fa-solid fa-comment-dots" aria-hidden="true"></i> &nbsp;
+            The Verdict
+          </p>
+          <h2 id="reviews-heading" class="section-title gold-text">
+            Members'<br />Feedback
+          </h2>
+          <p class="section-subtitle">
+            Direct from the Syndicate. Unfiltered. Uncut.
+          </p>
+        </div>
 
-      <div class="section-header fade-up">
-        <p class="section-label">
-          <i class="fa-solid fa-comment-dots" aria-hidden="true"></i> &nbsp;
-          The Verdict
-        </p>
-        <h2 id="reviews-heading" class="section-title gold-text">Members'<br />Feedback</h2>
-        <p class="section-subtitle">Direct from the Syndicate. Unfiltered. Uncut.</p>
-      </div>
-
-      <div class="reviews-slider" aria-label="Member reviews slider">
-        <div class="reviews-track" role="list">
-
-          <!-- Review 1 -->
-          <div class="review-slide" role="listitem">
-            <div class="review-card">
-              <div class="review-stars" aria-label="5 out of 5 stars">
-                <i class="fa-solid fa-star" aria-hidden="true"></i>
-                <i class="fa-solid fa-star" aria-hidden="true"></i>
-                <i class="fa-solid fa-star" aria-hidden="true"></i>
-                <i class="fa-solid fa-star" aria-hidden="true"></i>
-                <i class="fa-solid fa-star" aria-hidden="true"></i>
+        <div class="reviews-slider" aria-label="Member reviews slider">
+          <div class="reviews-track" role="list">
+            <!-- Review 1 -->
+            <div class="review-slide" role="listitem">
+              <div class="review-card">
+                <div class="review-stars" aria-label="5 out of 5 stars">
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                </div>
+                <blockquote class="review-text">
+                  "I've sourced from collectives across three continents.
+                  Nothing — and I mean absolutely nothing — touches what the
+                  Cartel moves. The Cartel OG is a generational cut. The terpene
+                  profile alone justifies the membership price for an entire
+                  year."
+                </blockquote>
+                <div class="review-author">
+                  <div class="review-avatar" aria-hidden="true">M</div>
+                  <div class="review-author-info">
+                    <div class="name">Marcus A.</div>
+                    <div class="role">
+                      Member Since 2022 &nbsp;·&nbsp; Platinum Tier
+                    </div>
+                  </div>
+                </div>
               </div>
-              <blockquote class="review-text">
-                "I've sourced from collectives across three continents. Nothing — 
-                and I mean absolutely nothing — touches what the Cartel moves. 
-                The Cartel OG is a generational cut. The terpene profile alone 
-                justifies the membership price for an entire year."
-              </blockquote>
-              <div class="review-author">
-                <div class="review-avatar" aria-hidden="true">M</div>
-                <div class="review-author-info">
-                  <div class="name">Marcus A.</div>
-                  <div class="role">Member Since 2022 &nbsp;·&nbsp; Platinum Tier</div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="review-slide" role="listitem">
+              <div class="review-card">
+                <div class="review-stars" aria-label="5 out of 5 stars">
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                </div>
+                <blockquote class="review-text">
+                  "The live rosin they dropped in December was, without
+                  exaggeration, the cleanest extract I have ever consumed. The
+                  transparency with lab results, the private delivery, the whole
+                  experience — this is what luxury actually means in this
+                  space."
+                </blockquote>
+                <div class="review-author">
+                  <div class="review-avatar" aria-hidden="true">S</div>
+                  <div class="review-author-info">
+                    <div class="name">Sofia R.</div>
+                    <div class="role">
+                      Member Since 2023 &nbsp;·&nbsp; Gold Tier
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="review-slide" role="listitem">
+              <div class="review-card">
+                <div class="review-stars" aria-label="5 out of 5 stars">
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                </div>
+                <blockquote class="review-text">
+                  "The exclusive drop notifications alone are worth it. Got
+                  priority access to the Terpinolene-heavy batch before it was
+                  even publicly listed. The curation is obsessive. The Cartel
+                  does not play with mid. Period."
+                </blockquote>
+                <div class="review-author">
+                  <div class="review-avatar" aria-hidden="true">D</div>
+                  <div class="review-author-info">
+                    <div class="name">Devon K.</div>
+                    <div class="role">
+                      Member Since 2021 &nbsp;·&nbsp; Black Tier
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <!-- end track -->
+        </div>
+        <!-- end slider -->
 
-          <!-- Review 2 -->
-          <div class="review-slide" role="listitem">
-            <div class="review-card">
-              <div class="review-stars" aria-label="5 out of 5 stars">
-                <i class="fa-solid fa-star" aria-hidden="true"></i>
-                <i class="fa-solid fa-star" aria-hidden="true"></i>
-                <i class="fa-solid fa-star" aria-hidden="true"></i>
-                <i class="fa-solid fa-star" aria-hidden="true"></i>
-                <i class="fa-solid fa-star" aria-hidden="true"></i>
-              </div>
-              <blockquote class="review-text">
-                "The live rosin they dropped in December was, without exaggeration, 
-                the cleanest extract I have ever consumed. The transparency with 
-                lab results, the private delivery, the whole experience — 
-                this is what luxury actually means in this space."
-              </blockquote>
-              <div class="review-author">
-                <div class="review-avatar" aria-hidden="true">S</div>
-                <div class="review-author-info">
-                  <div class="name">Sofia R.</div>
-                  <div class="role">Member Since 2023 &nbsp;·&nbsp; Gold Tier</div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <!-- Controls -->
+        <div class="reviews-controls" aria-label="Slider controls">
+          <button id="review-prev" aria-label="Previous review">
+            <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+          </button>
+          <button id="review-next" aria-label="Next review">
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
 
-          <!-- Review 3 -->
-          <div class="review-slide" role="listitem">
-            <div class="review-card">
-              <div class="review-stars" aria-label="5 out of 5 stars">
-                <i class="fa-solid fa-star" aria-hidden="true"></i>
-                <i class="fa-solid fa-star" aria-hidden="true"></i>
-                <i class="fa-solid fa-star" aria-hidden="true"></i>
-                <i class="fa-solid fa-star" aria-hidden="true"></i>
-                <i class="fa-solid fa-star" aria-hidden="true"></i>
-              </div>
-              <blockquote class="review-text">
-                "The exclusive drop notifications alone are worth it. 
-                Got priority access to the Terpinolene-heavy batch before 
-                it was even publicly listed. The curation is obsessive. 
-                The Cartel does not play with mid. Period."
-              </blockquote>
-              <div class="review-author">
-                <div class="review-avatar" aria-hidden="true">D</div>
-                <div class="review-author-info">
-                  <div class="name">Devon K.</div>
-                  <div class="role">Member Since 2021 &nbsp;·&nbsp; Black Tier</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div><!-- end track -->
-      </div><!-- end slider -->
-
-      <!-- Controls -->
-      <div class="reviews-controls" aria-label="Slider controls">
-        <button id="review-prev" aria-label="Previous review">
-          <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
-        </button>
-        <button id="review-next" aria-label="Next review">
-          <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-        </button>
+        <!-- Dots -->
+        <div class="review-dots" role="tablist" aria-label="Slide navigation">
+          <button
+            class="review-dot active"
+            role="tab"
+            aria-label="Slide 1"
+            aria-selected="true"
+          ></button>
+          <button
+            class="review-dot"
+            role="tab"
+            aria-label="Slide 2"
+            aria-selected="false"
+          ></button>
+          <button
+            class="review-dot"
+            role="tab"
+            aria-label="Slide 3"
+            aria-selected="false"
+          ></button>
+        </div>
       </div>
+    </section>
 
-      <!-- Dots -->
-      <div class="review-dots" role="tablist" aria-label="Slide navigation">
-        <button class="review-dot active" role="tab" aria-label="Slide 1" aria-selected="true"></button>
-        <button class="review-dot" role="tab" aria-label="Slide 2" aria-selected="false"></button>
-        <button class="review-dot" role="tab" aria-label="Slide 3" aria-selected="false"></button>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════════════
        10. BLACKBOOK FAQ
   ════════════════════════════════════════════════════ -->
-  <section id="faq" aria-labelledby="faq-heading">
-    <div class="container">
-      <div class="faq-grid">
+    <section id="faq" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="faq-grid">
+          <!-- Info -->
+          <div class="faq-info">
+            <p class="faq-info-tag">
+              <i class="fa-solid fa-book" aria-hidden="true"></i> &nbsp; The
+              Blackbook
+            </p>
+            <h2 id="faq-heading" class="faq-info-title gold-text">
+              Everything<br />You Need<br />to Know.
+            </h2>
+            <p class="faq-info-body">
+              The Cartel maintains total transparency on compliance, sourcing,
+              and membership protocols. If the Blackbook doesn't answer your
+              question, reach out to the Council directly.
+            </p>
+            <a
+              href="mailto:council@dankerycartel.com"
+              class="faq-contact-link"
+              aria-label="Contact the Council"
+            >
+              Contact the Council
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
 
-        <!-- Info -->
-        <div class="faq-info">
-          <p class="faq-info-tag">
-            <i class="fa-solid fa-book" aria-hidden="true"></i> &nbsp; The Blackbook
-          </p>
-          <h2 id="faq-heading" class="faq-info-title gold-text">
-            Everything<br />You Need<br />to Know.
-          </h2>
-          <p class="faq-info-body">
-            The Cartel maintains total transparency on compliance, sourcing, and 
-            membership protocols. If the Blackbook doesn't answer your question, 
-            reach out to the Council directly.
-          </p>
-          <a href="mailto:council@dankerycartel.com" class="faq-contact-link" aria-label="Contact the Council">
-            Contact the Council
-            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          <!-- Accordion -->
+          <div class="accordion" id="faq-accordion">
+            <div class="accordion-item" id="faq-1">
+              <button
+                class="accordion-trigger"
+                aria-expanded="false"
+                aria-controls="faq-answer-1"
+                id="faq-btn-1"
+              >
+                <span class="accordion-question">
+                  How do I apply for Cartel membership?
+                </span>
+                <span class="accordion-icon" aria-hidden="true">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+              </button>
+              <div
+                class="accordion-body"
+                id="faq-answer-1"
+                role="region"
+                aria-labelledby="faq-btn-1"
+              >
+                <p class="accordion-answer">
+                  Membership is by invitation or curated application. Submit
+                  your application through the portal on this page. Our council
+                  reviews applications weekly and selects based on community
+                  fit, location compliance, and referral standing. You will
+                  receive a secure communication within 7–14 business days. No
+                  walk-ins. No exceptions.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion-item" id="faq-2">
+              <button
+                class="accordion-trigger"
+                aria-expanded="false"
+                aria-controls="faq-answer-2"
+                id="faq-btn-2"
+              >
+                <span class="accordion-question">
+                  Is private delivery legal and compliant?
+                </span>
+                <span class="accordion-icon" aria-hidden="true">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+              </button>
+              <div
+                class="accordion-body"
+                id="faq-answer-2"
+                role="region"
+                aria-labelledby="faq-btn-2"
+              >
+                <p class="accordion-answer">
+                  All Cartel deliveries operate under full regulatory compliance
+                  with applicable cannabis delivery licensing in each
+                  jurisdiction we serve. Age verification (21+) is required at
+                  every delivery via government-issued photo ID. We do not
+                  operate in jurisdictions where cannabis delivery is
+                  prohibited. Our legal team monitors compliance in real-time.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion-item" id="faq-3">
+              <button
+                class="accordion-trigger"
+                aria-expanded="false"
+                aria-controls="faq-answer-3"
+                id="faq-btn-3"
+              >
+                <span class="accordion-question">
+                  Where do your strains come from?
+                </span>
+                <span class="accordion-icon" aria-hidden="true">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+              </button>
+              <div
+                class="accordion-body"
+                id="faq-answer-3"
+                role="region"
+                aria-labelledby="faq-btn-3"
+              >
+                <p class="accordion-answer">
+                  Every strain in the Vault has a documented genetic lineage and
+                  cultivation origin. We partner with a closed network of
+                  licensed master cultivators who operate under exclusive
+                  agreements with the Cartel. No third-party wholesale. No
+                  unknown genetics. We track provenance from seed to vault — and
+                  make all lab documentation available to members upon request.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion-item" id="faq-4">
+              <button
+                class="accordion-trigger"
+                aria-expanded="false"
+                aria-controls="faq-answer-4"
+                id="faq-btn-4"
+              >
+                <span class="accordion-question">
+                  What are the membership tiers and pricing?
+                </span>
+                <span class="accordion-icon" aria-hidden="true">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+              </button>
+              <div
+                class="accordion-body"
+                id="faq-answer-4"
+                role="region"
+                aria-labelledby="faq-btn-4"
+              >
+                <p class="accordion-answer">
+                  The Cartel operates three membership tiers:
+                  <strong>Gold</strong> (curated access, standard priority),
+                  <strong>Platinum</strong> (first-access drops, dedicated
+                  liaison, private event access), and
+                  <strong>Black</strong> (all of the above plus direct
+                  cultivator relationships, bespoke curation, and council
+                  invitations). Pricing is disclosed during the application
+                  review stage. We do not publish rates publicly.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion-item" id="faq-5">
+              <button
+                class="accordion-trigger"
+                aria-expanded="false"
+                aria-controls="faq-answer-5"
+                id="faq-btn-5"
+              >
+                <span class="accordion-question">
+                  How are lab results verified?
+                </span>
+                <span class="accordion-icon" aria-hidden="true">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+              </button>
+              <div
+                class="accordion-body"
+                id="faq-answer-5"
+                role="region"
+                aria-labelledby="faq-btn-5"
+              >
+                <p class="accordion-answer">
+                  Every product in the Vault is submitted to accredited
+                  third-party ISO/IEC 17025-certified laboratories for full
+                  panel testing. This includes cannabinoid potency, terpene
+                  profile, residual solvents, pesticides, heavy metals, and
+                  microbials. Full COAs (Certificates of Analysis) are
+                  accessible via your member dashboard upon product purchase.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end accordion -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+       11. FINAL CTA BANNER
+  ════════════════════════════════════════════════════ -->
+    <section id="cta-banner" aria-labelledby="cta-heading">
+      <!-- Background -->
+      <div class="cta-bg" aria-hidden="true"></div>
+      <div class="cta-bg-overlay" aria-hidden="true"></div>
+
+      <!-- Gold particle canvas -->
+      <canvas
+        id="gold-canvas"
+        aria-hidden="true"
+        style="
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
+          z-index: 2;
+        "
+      ></canvas>
+
+      <!-- Content -->
+      <div class="cta-content" style="position: relative; z-index: 5">
+        <i class="fa-solid fa-crown cta-crown" aria-hidden="true"></i>
+
+        <h2 id="cta-heading" class="cta-heading">Apply for<br />Access</h2>
+
+        <p class="cta-sub">The next exclusive drop closes in —</p>
+
+        <!-- Countdown Timer -->
+        <div
+          class="countdown"
+          role="timer"
+          aria-live="polite"
+          aria-label="Countdown to next exclusive drop"
+        >
+          <div class="countdown-unit">
+            <span class="countdown-number" id="cd-days">07</span>
+            <span class="countdown-label">Days</span>
+          </div>
+          <span class="countdown-sep" aria-hidden="true">:</span>
+          <div class="countdown-unit">
+            <span class="countdown-number" id="cd-hours">00</span>
+            <span class="countdown-label">Hours</span>
+          </div>
+          <span class="countdown-sep" aria-hidden="true">:</span>
+          <div class="countdown-unit">
+            <span class="countdown-number" id="cd-mins">00</span>
+            <span class="countdown-label">Minutes</span>
+          </div>
+          <span class="countdown-sep" aria-hidden="true">:</span>
+          <div class="countdown-unit">
+            <span class="countdown-number" id="cd-secs">00</span>
+            <span class="countdown-label">Seconds</span>
+          </div>
+        </div>
+
+        <div class="hero-ctas">
+          <a
+            href="mailto:apply@dankerycartel.com"
+            id="cta-apply-btn"
+            class="btn-primary"
+            aria-label="Apply for Cartel Membership"
+          >
+            Apply for Membership
+          </a>
+          <a
+            href="#vault"
+            id="cta-vault-btn"
+            class="btn-secondary"
+            aria-label="Explore The Vault"
+          >
+            <span>Explore the Vault</span>
           </a>
         </div>
 
-        <!-- Accordion -->
-        <div class="accordion" id="faq-accordion">
-
-          <div class="accordion-item" id="faq-1">
-            <button class="accordion-trigger" 
-                    aria-expanded="false" 
-                    aria-controls="faq-answer-1"
-                    id="faq-btn-1">
-              <span class="accordion-question">
-                How do I apply for Cartel membership?
-              </span>
-              <span class="accordion-icon" aria-hidden="true">
-                <i class="fa-solid fa-plus"></i>
-              </span>
-            </button>
-            <div class="accordion-body" 
-                 id="faq-answer-1" 
-                 role="region" 
-                 aria-labelledby="faq-btn-1">
-              <p class="accordion-answer">
-                Membership is by invitation or curated application. Submit your 
-                application through the portal on this page. Our council reviews 
-                applications weekly and selects based on community fit, location 
-                compliance, and referral standing. You will receive a secure 
-                communication within 7–14 business days. No walk-ins. No exceptions.
-              </p>
-            </div>
-          </div>
-
-          <div class="accordion-item" id="faq-2">
-            <button class="accordion-trigger"
-                    aria-expanded="false"
-                    aria-controls="faq-answer-2"
-                    id="faq-btn-2">
-              <span class="accordion-question">
-                Is private delivery legal and compliant?
-              </span>
-              <span class="accordion-icon" aria-hidden="true">
-                <i class="fa-solid fa-plus"></i>
-              </span>
-            </button>
-            <div class="accordion-body"
-                 id="faq-answer-2"
-                 role="region"
-                 aria-labelledby="faq-btn-2">
-              <p class="accordion-answer">
-                All Cartel deliveries operate under full regulatory compliance 
-                with applicable cannabis delivery licensing in each jurisdiction 
-                we serve. Age verification (21+) is required at every delivery 
-                via government-issued photo ID. We do not operate in jurisdictions 
-                where cannabis delivery is prohibited. Our legal team monitors 
-                compliance in real-time.
-              </p>
-            </div>
-          </div>
-
-          <div class="accordion-item" id="faq-3">
-            <button class="accordion-trigger"
-                    aria-expanded="false"
-                    aria-controls="faq-answer-3"
-                    id="faq-btn-3">
-              <span class="accordion-question">
-                Where do your strains come from?
-              </span>
-              <span class="accordion-icon" aria-hidden="true">
-                <i class="fa-solid fa-plus"></i>
-              </span>
-            </button>
-            <div class="accordion-body"
-                 id="faq-answer-3"
-                 role="region"
-                 aria-labelledby="faq-btn-3">
-              <p class="accordion-answer">
-                Every strain in the Vault has a documented genetic lineage and 
-                cultivation origin. We partner with a closed network of licensed 
-                master cultivators who operate under exclusive agreements with 
-                the Cartel. No third-party wholesale. No unknown genetics. 
-                We track provenance from seed to vault — and make all lab 
-                documentation available to members upon request.
-              </p>
-            </div>
-          </div>
-
-          <div class="accordion-item" id="faq-4">
-            <button class="accordion-trigger"
-                    aria-expanded="false"
-                    aria-controls="faq-answer-4"
-                    id="faq-btn-4">
-              <span class="accordion-question">
-                What are the membership tiers and pricing?
-              </span>
-              <span class="accordion-icon" aria-hidden="true">
-                <i class="fa-solid fa-plus"></i>
-              </span>
-            </button>
-            <div class="accordion-body"
-                 id="faq-answer-4"
-                 role="region"
-                 aria-labelledby="faq-btn-4">
-              <p class="accordion-answer">
-                The Cartel operates three membership tiers: <strong>Gold</strong> 
-                (curated access, standard priority), <strong>Platinum</strong> 
-                (first-access drops, dedicated liaison, private event access), 
-                and <strong>Black</strong> (all of the above plus direct cultivator 
-                relationships, bespoke curation, and council invitations). 
-                Pricing is disclosed during the application review stage. 
-                We do not publish rates publicly.
-              </p>
-            </div>
-          </div>
-
-          <div class="accordion-item" id="faq-5">
-            <button class="accordion-trigger"
-                    aria-expanded="false"
-                    aria-controls="faq-answer-5"
-                    id="faq-btn-5">
-              <span class="accordion-question">
-                How are lab results verified?
-              </span>
-              <span class="accordion-icon" aria-hidden="true">
-                <i class="fa-solid fa-plus"></i>
-              </span>
-            </button>
-            <div class="accordion-body"
-                 id="faq-answer-5"
-                 role="region"
-                 aria-labelledby="faq-btn-5">
-              <p class="accordion-answer">
-                Every product in the Vault is submitted to accredited third-party 
-                ISO/IEC 17025-certified laboratories for full panel testing. 
-                This includes cannabinoid potency, terpene profile, residual 
-                solvents, pesticides, heavy metals, and microbials. 
-                Full COAs (Certificates of Analysis) are accessible via 
-                your member dashboard upon product purchase.
-              </p>
-            </div>
-          </div>
-
-        </div><!-- end accordion -->
+        <p class="cta-note">
+          21+ Only &nbsp;·&nbsp; Compliant Jurisdictions Only &nbsp;·&nbsp;
+          Membership by Review Only
+        </p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ═══════════════════════════════════════════════════
-       11. FINAL CTA BANNER
-  ════════════════════════════════════════════════════ -->
-  <section id="cta-banner" aria-labelledby="cta-heading">
-    <!-- Background -->
-    <div class="cta-bg" aria-hidden="true"></div>
-    <div class="cta-bg-overlay" aria-hidden="true"></div>
-
-    <!-- Gold particle canvas -->
-    <canvas id="gold-canvas"
-            aria-hidden="true"
-            style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2;"></canvas>
-
-    <!-- Content -->
-    <div class="cta-content" style="position:relative;z-index:5;">
-      <i class="fa-solid fa-crown cta-crown" aria-hidden="true"></i>
-
-      <h2 id="cta-heading" class="cta-heading">
-        Apply for<br />Access
-      </h2>
-
-      <p class="cta-sub">
-        The next exclusive drop closes in —
-      </p>
-
-      <!-- Countdown Timer -->
-      <div class="countdown" role="timer" aria-live="polite" aria-label="Countdown to next exclusive drop">
-        <div class="countdown-unit">
-          <span class="countdown-number" id="cd-days">07</span>
-          <span class="countdown-label">Days</span>
-        </div>
-        <span class="countdown-sep" aria-hidden="true">:</span>
-        <div class="countdown-unit">
-          <span class="countdown-number" id="cd-hours">00</span>
-          <span class="countdown-label">Hours</span>
-        </div>
-        <span class="countdown-sep" aria-hidden="true">:</span>
-        <div class="countdown-unit">
-          <span class="countdown-number" id="cd-mins">00</span>
-          <span class="countdown-label">Minutes</span>
-        </div>
-        <span class="countdown-sep" aria-hidden="true">:</span>
-        <div class="countdown-unit">
-          <span class="countdown-number" id="cd-secs">00</span>
-          <span class="countdown-label">Seconds</span>
-        </div>
-      </div>
-
-      <div class="hero-ctas">
-        <a href="mailto:apply@dankerycartel.com"
-           id="cta-apply-btn"
-           class="btn-primary"
-           aria-label="Apply for Cartel Membership">
-          Apply for Membership
-        </a>
-        <a href="#vault"
-           id="cta-vault-btn"
-           class="btn-secondary"
-           aria-label="Explore The Vault">
-          <span>Explore the Vault</span>
-        </a>
-      </div>
-
-      <p class="cta-note">
-        21+ Only &nbsp;·&nbsp; Compliant Jurisdictions Only &nbsp;·&nbsp;
-        Membership by Review Only
-      </p>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════════════
        12. FOOTER
   ════════════════════════════════════════════════════ -->
-  <footer id="footer" role="contentinfo">
-    <div class="container">
+    <footer id="footer" role="contentinfo">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Brand -->
+          <div class="footer-brand">
+            <div class="brand-name">Dankery Cartel</div>
+            <div class="brand-sub">Elite Private Cannabis Club</div>
+            <p>
+              A sovereign operation dedicated to the absolute pursuit of clean,
+              potent, and genetically documented cannabis. Not a brand. A
+              standard.
+            </p>
+            <div class="footer-socials" aria-label="Social media links">
+              <a href="#" class="social-link" aria-label="Instagram">
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="social-link" aria-label="Telegram">
+                <i class="fa-brands fa-telegram" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="social-link" aria-label="X / Twitter">
+                <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
 
-      <div class="footer-grid">
+          <!-- Navigation -->
+          <div>
+            <h3 class="footer-col-title">Navigate</h3>
+            <ul class="footer-links" role="list">
+              <li><a href="#manifesto">The Manifesto</a></li>
+              <li><a href="#vault">The Vault</a></li>
+              <li><a href="#terpene">Terpene Chemistry</a></li>
+              <li><a href="#syndicate">The Syndicate</a></li>
+              <li><a href="#reviews">Member Reviews</a></li>
+            </ul>
+          </div>
 
-        <!-- Brand -->
-        <div class="footer-brand">
-          <div class="brand-name">Dankery Cartel</div>
-          <div class="brand-sub">Elite Private Cannabis Club</div>
-          <p>
-            A sovereign operation dedicated to the absolute pursuit of 
-            clean, potent, and genetically documented cannabis. 
-            Not a brand. A standard.
-          </p>
-          <div class="footer-socials" aria-label="Social media links">
-            <a href="#" class="social-link" aria-label="Instagram">
-              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-            </a>
-            <a href="#" class="social-link" aria-label="Telegram">
-              <i class="fa-brands fa-telegram" aria-hidden="true"></i>
-            </a>
-            <a href="#" class="social-link" aria-label="X / Twitter">
-              <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
-            </a>
+          <!-- Vault Categories -->
+          <div>
+            <h3 class="footer-col-title">The Vault</h3>
+            <ul class="footer-links" role="list">
+              <li><a href="flower.html">Sovereign Flower</a></li>
+              <li><a href="concentrates.html">Liquid Gold</a></li>
+              <li><a href="membership.html">Member Perks</a></li>
+            </ul>
+          </div>
+
+          <!-- Membership -->
+          <div>
+            <h3 class="footer-col-title">Membership</h3>
+            <ul class="footer-links" role="list">
+              <li><a href="#cta-banner">Apply for Access</a></li>
+              <li><a href="#faq">The Blackbook</a></li>
+              <li><a href="#vault">Explore the Vault</a></li>
+              <li>
+                <a href="mailto:council@dankerycartel.com">Contact Council</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Compliance -->
+          <div>
+            <h3 class="footer-col-title">Compliance</h3>
+            <ul class="footer-links" role="list">
+              <li><a href="#">Lab Results (COA)</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Access</a></li>
+              <li><a href="#">Delivery Compliance</a></li>
+              <li><a href="#">Responsible Use</a></li>
+            </ul>
           </div>
         </div>
 
-        <!-- Navigation -->
-        <div>
-          <h3 class="footer-col-title">Navigate</h3>
-          <ul class="footer-links" role="list">
-            <li><a href="#manifesto">The Manifesto</a></li>
-            <li><a href="#vault">The Vault</a></li>
-            <li><a href="#terpene">Terpene Chemistry</a></li>
-            <li><a href="#syndicate">The Syndicate</a></li>
-            <li><a href="#reviews">Member Reviews</a></li>
-          </ul>
-        </div>
+        <!-- Bottom bar -->
+        <div class="footer-bottom">
+          <div class="footer-legal">
+            <p>
+              &copy; 2024 Dankery Cartel. All rights reserved. For entertainment
+              and membership inquiry purposes only.<br />
+              Cannabis products are for use by adults 21 years of age or older.
+              Keep out of reach of children.<br />
+              <a href="#">Privacy</a> &nbsp;·&nbsp;
+              <a href="#">Terms</a> &nbsp;·&nbsp;
+              <a href="#">Legal Compliance</a>
+            </p>
+          </div>
 
-        <!-- Vault Categories -->
-        <div>
-          <h3 class="footer-col-title">The Vault</h3>
-          <ul class="footer-links" role="list">
-            <li><a href="flower.html">Sovereign Flower</a></li>
-            <li><a href="concentrates.html">Liquid Gold</a></li>
-            <li><a href="membership.html">Member Perks</a></li>
-          </ul>
-        </div>
-
-        <!-- Membership -->
-        <div>
-          <h3 class="footer-col-title">Membership</h3>
-          <ul class="footer-links" role="list">
-            <li><a href="#cta-banner">Apply for Access</a></li>
-            <li><a href="#faq">The Blackbook</a></li>
-            <li><a href="#vault">Explore the Vault</a></li>
-            <li><a href="mailto:council@dankerycartel.com">Contact Council</a></li>
-          </ul>
-        </div>
-
-        <!-- Compliance -->
-        <div>
-          <h3 class="footer-col-title">Compliance</h3>
-          <ul class="footer-links" role="list">
-            <li><a href="#">Lab Results (COA)</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Access</a></li>
-            <li><a href="#">Delivery Compliance</a></li>
-            <li><a href="#">Responsible Use</a></li>
-          </ul>
-        </div>
-
-      </div>
-
-      <!-- Bottom bar -->
-      <div class="footer-bottom">
-        <div class="footer-legal">
-          <p>
-            &copy; 2024 Dankery Cartel. All rights reserved. For entertainment and membership inquiry purposes only.<br />
-            Cannabis products are for use by adults 21 years of age or older. Keep out of reach of children.<br />
-            <a href="#">Privacy</a> &nbsp;·&nbsp; <a href="#">Terms</a> &nbsp;·&nbsp;
-            <a href="#">Legal Compliance</a>
-          </p>
-        </div>
-
-        <div class="age-badge" aria-label="Age restriction: 21 and over">
-          <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
-          21+ Only &nbsp;·&nbsp; Licensed &amp; Compliant
+          <div class="age-badge" aria-label="Age restriction: 21 and over">
+            <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+            21+ Only &nbsp;·&nbsp; Licensed &amp; Compliant
+          </div>
         </div>
       </div>
+    </footer>
 
-    </div>
-  </footer>
-
-  <!-- ═══════════════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════════════
        SCRIPTS — GSAP & SCROLLTRIGGER
   ════════════════════════════════════════════════════ -->
-  <!-- GSAP Core -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <!-- ScrollTrigger Plugin -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <!-- ScrollTo Plugin (for smooth anchor scrolling) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    <!-- GSAP Core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <!-- ScrollTrigger Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- ScrollTo Plugin (for smooth anchor scrolling) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
 
-  <!-- Main JS -->
-  <script src="js/main.js"></script>
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
 
-  <!-- Inline: register plugins before main.js runs any ScrollTrigger -->
-  <script>
-    if (typeof gsap !== 'undefined') {
-      gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-    }
-  </script>
-
-</body>
+    <!-- Inline: register plugins before main.js runs any ScrollTrigger -->
+    <script>
+      if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
+        if (typeof ScrollToPlugin !== "undefined") {
+          gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+        } else {
+          gsap.registerPlugin(ScrollTrigger);
+        }
+      }
+    </script>
+  </body>
 </html>
